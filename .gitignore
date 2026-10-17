@@ -1,0 +1,20 @@
+# Gebaute Dateien
+build/
+*.class
+*.jar
+
+# Daten aus Packs, die nicht veroeffentlicht werden duerfen (lokal mit konverter/ erzeugen)
+res/daten/gaertner.yml
+res/daten/rezepte-voll.yml
+packs/
+
+# Aus der Minecraft-Jar erzeugt (pruefung/vanilla_tags_erzeugen.py)
+pruefung/vanilla_tags*.json
+
+# Python / Editor
+__pycache__/
+.idea/
+.vscode/
+
+# Fertige Jar zum Herunterladen
+!download/*.jar

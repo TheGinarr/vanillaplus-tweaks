@@ -1,0 +1,16 @@
+Credits:
+Vanilla Tweaks: https://vanillatweaks.net/
+
+VanillaPlusTweaks bildet folgende Vanilla-Tweaks-Datapacks als Plugin-Code nach:
+  AFK Display, Multiplayer Sleep, Fast Leaf Decay, Cauldron Concrete, Cauldron Mud,
+  Silence Mobs, Unlock All Recipes, Kill Empty Boats, XP Bottling, Custom Nether Portals,
+  Husks Drop Sand, Armored Elytra, Classic Fishing Loot, More Mob Heads, Painting Picker,
+  Player Head Drops, Silk Touch Budding Amethyst, Wood Stripper
+Kopf-Texturen und -Namen (daten/koepfe.yml) sowie die Painting-Picker- und
+Wood-Stripper-Rezepte (daten/rezepte.yml) stammen aus diesen Packs.
+
+Vorbilder, deren Daten NICHT enthalten sind (der Code ist eigenstaendig geschrieben):
+  Gardener's Dream von Gurkis: https://modrinth.com/datapack/gardeners-dream
+  MasterCutter von nico4play: https://modrinth.com/project/DuUMFIfX
+
+VanillaPlusTweaks ist kostenlos und wird nicht verkauft.

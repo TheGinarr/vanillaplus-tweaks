@@ -1,0 +1,435 @@
+# Steinsaegen-Rezepte fuer VanillaPlusTweaks.
+#
+# Im oeffentlichen Repository stehen hier nur die Rezepte aus Painting Picker und Wood Stripper
+# (Vanilla Tweaks, Weitergabe mit Aenderungen und Credit erlaubt).
+# MasterCutter (CC-BY-ND-4.0) und Gardener's Dream (All Rights Reserved) duerfen nicht als
+# bearbeitete Fassung veroeffentlicht werden. Die vollstaendige Datei erzeugt man lokal mit
+#   python3 konverter/rezepte_konvertieren.py <ordner-mit-den-packs> res/daten/rezepte.yml
+# aus den selbst heruntergeladenen Original-Packs (siehe README).
+
+steinsaege:
+- name: painting_picker/painting_picker/painting
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/alban
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:alban"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/aztec
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:aztec"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/aztec2
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:aztec2"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/backyard
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:backyard"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/baroque
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:baroque"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/bomb
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:bomb"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/bouquet
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:bouquet"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/burning_skull
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:burning_skull"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/bust
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:bust"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/cavebird
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:cavebird"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/changing
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:changing"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/cotan
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:cotan"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/courbet
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:courbet"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/creebet
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:creebet"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/dennis
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:dennis"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/donkey_kong
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:donkey_kong"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/endboss
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:endboss"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/fern
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:fern"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/fighters
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:fighters"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/finding
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:finding"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/graham
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:graham"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/humble
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:humble"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/kebab
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:kebab"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/lowmist
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:lowmist"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/match
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:match"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/meditative
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:meditative"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/orb
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:orb"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/owlemons
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:owlemons"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/passage
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:passage"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/pigscene
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:pigscene"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/plant
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:plant"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/pointer
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:pointer"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/pond
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:pond"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/pool
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:pool"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/prairie_ride
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:prairie_ride"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/sea
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:sea"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/skeleton
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:skeleton"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/skull_and_roses
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:skull_and_roses"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/stage
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:stage"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/sunflowers
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:sunflowers"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/sunset
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:sunset"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/tides
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:tides"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/unpacked
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:unpacked"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/void
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:void"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/wanderer
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:wanderer"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/wasteland
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:wasteland"]
+  anzahl: 1
+- name: painting_picker/painting_picker/painting_variant/wither
+  zutat:
+  - minecraft:painting
+  ergebnis: minecraft:painting[minecraft:painting/variant="minecraft:wither"]
+  anzahl: 1
+- name: wood_stripper/wood_stripper/acacia_log
+  zutat:
+  - minecraft:acacia_log
+  ergebnis: minecraft:stripped_acacia_log
+  anzahl: 1
+- name: wood_stripper/wood_stripper/acacia_wood
+  zutat:
+  - minecraft:acacia_wood
+  ergebnis: minecraft:stripped_acacia_wood
+  anzahl: 1
+- name: wood_stripper/wood_stripper/bamboo_block
+  zutat:
+  - minecraft:bamboo_block
+  ergebnis: minecraft:stripped_bamboo_block
+  anzahl: 1
+- name: wood_stripper/wood_stripper/birch_log
+  zutat:
+  - minecraft:birch_log
+  ergebnis: minecraft:stripped_birch_log
+  anzahl: 1
+- name: wood_stripper/wood_stripper/birch_wood
+  zutat:
+  - minecraft:birch_wood
+  ergebnis: minecraft:stripped_birch_wood
+  anzahl: 1
+- name: wood_stripper/wood_stripper/cherry_log
+  zutat:
+  - minecraft:cherry_log
+  ergebnis: minecraft:stripped_cherry_log
+  anzahl: 1
+- name: wood_stripper/wood_stripper/cherry_wood
+  zutat:
+  - minecraft:cherry_wood
+  ergebnis: minecraft:stripped_cherry_wood
+  anzahl: 1
+- name: wood_stripper/wood_stripper/crimson_hyphae
+  zutat:
+  - minecraft:crimson_hyphae
+  ergebnis: minecraft:stripped_crimson_hyphae
+  anzahl: 1
+- name: wood_stripper/wood_stripper/crimson_stem
+  zutat:
+  - minecraft:crimson_stem
+  ergebnis: minecraft:stripped_crimson_stem
+  anzahl: 1
+- name: wood_stripper/wood_stripper/dark_oak_log
+  zutat:
+  - minecraft:dark_oak_log
+  ergebnis: minecraft:stripped_dark_oak_log
+  anzahl: 1
+- name: wood_stripper/wood_stripper/dark_oak_wood
+  zutat:
+  - minecraft:dark_oak_wood
+  ergebnis: minecraft:stripped_dark_oak_wood
+  anzahl: 1
+- name: wood_stripper/wood_stripper/jungle_log
+  zutat:
+  - minecraft:jungle_log
+  ergebnis: minecraft:stripped_jungle_log
+  anzahl: 1
+- name: wood_stripper/wood_stripper/jungle_wood
+  zutat:
+  - minecraft:jungle_wood
+  ergebnis: minecraft:stripped_jungle_wood
+  anzahl: 1
+- name: wood_stripper/wood_stripper/mangrove_log
+  zutat:
+  - minecraft:mangrove_log
+  ergebnis: minecraft:stripped_mangrove_log
+  anzahl: 1
+- name: wood_stripper/wood_stripper/mangrove_wood
+  zutat:
+  - minecraft:mangrove_wood
+  ergebnis: minecraft:stripped_mangrove_wood
+  anzahl: 1
+- name: wood_stripper/wood_stripper/oak_log
+  zutat:
+  - minecraft:oak_log
+  ergebnis: minecraft:stripped_oak_log
+  anzahl: 1
+- name: wood_stripper/wood_stripper/oak_wood
+  zutat:
+  - minecraft:oak_wood
+  ergebnis: minecraft:stripped_oak_wood
+  anzahl: 1
+- name: wood_stripper/wood_stripper/pale_oak_log
+  zutat:
+  - minecraft:pale_oak_log
+  ergebnis: minecraft:stripped_pale_oak_log
+  anzahl: 1
+- name: wood_stripper/wood_stripper/pale_oak_wood
+  zutat:
+  - minecraft:pale_oak_wood
+  ergebnis: minecraft:stripped_pale_oak_wood
+  anzahl: 1
+- name: wood_stripper/wood_stripper/partial/acacia_wood
+  zutat:
+  - minecraft:acacia_wood
+  ergebnis: minecraft:acacia_log
+  anzahl: 1
+- name: wood_stripper/wood_stripper/partial/birch_wood
+  zutat:
+  - minecraft:birch_wood
+  ergebnis: minecraft:birch_log
+  anzahl: 1
+- name: wood_stripper/wood_stripper/partial/cherry_wood
+  zutat:
+  - minecraft:cherry_wood
+  ergebnis: minecraft:cherry_log
+  anzahl: 1
+- name: wood_stripper/wood_stripper/partial/crimson_hyphae
+  zutat:
+  - minecraft:crimson_hyphae
+  ergebnis: minecraft:crimson_stem
+  anzahl: 1
+- name: wood_stripper/wood_stripper/partial/dark_oak_wood
+  zutat:
+  - minecraft:dark_oak_wood
+  ergebnis: minecraft:dark_oak_log
+  anzahl: 1
+- name: wood_stripper/wood_stripper/partial/jungle_wood
+  zutat:
+  - minecraft:jungle_wood
+  ergebnis: minecraft:jungle_log
+  anzahl: 1
+- name: wood_stripper/wood_stripper/partial/mangrove_wood
+  zutat:
+  - minecraft:mangrove_wood
+  ergebnis: minecraft:mangrove_log
+  anzahl: 1
+- name: wood_stripper/wood_stripper/partial/oak_wood
+  zutat:
+  - minecraft:oak_wood
+  ergebnis: minecraft:oak_log
+  anzahl: 1
+- name: wood_stripper/wood_stripper/partial/pale_oak_wood
+  zutat:
+  - minecraft:pale_oak_wood
+  ergebnis: minecraft:pale_oak_log
+  anzahl: 1
+- name: wood_stripper/wood_stripper/partial/poplar_wood
+  zutat:
+  - minecraft:poplar_wood
+  ergebnis: minecraft:poplar_log
+  anzahl: 1
+- name: wood_stripper/wood_stripper/partial/spruce_wood
+  zutat:
+  - minecraft:spruce_wood
+  ergebnis: minecraft:spruce_log
+  anzahl: 1
+- name: wood_stripper/wood_stripper/partial/warped_hyphae
+  zutat:
+  - minecraft:warped_hyphae
+  ergebnis: minecraft:warped_stem
+  anzahl: 1
+- name: wood_stripper/wood_stripper/poplar_log
+  zutat:
+  - minecraft:poplar_log
+  ergebnis: minecraft:stripped_poplar_log
+  anzahl: 1
+- name: wood_stripper/wood_stripper/poplar_wood
+  zutat:
+  - minecraft:poplar_wood
+  ergebnis: minecraft:stripped_poplar_wood
+  anzahl: 1
+- name: wood_stripper/wood_stripper/spruce_log
+  zutat:
+  - minecraft:spruce_log
+  ergebnis: minecraft:stripped_spruce_log
+  anzahl: 1
+- name: wood_stripper/wood_stripper/spruce_wood
+  zutat:
+  - minecraft:spruce_wood
+  ergebnis: minecraft:stripped_spruce_wood
+  anzahl: 1
+- name: wood_stripper/wood_stripper/warped_hyphae
+  zutat:
+  - minecraft:warped_hyphae
+  ergebnis: minecraft:stripped_warped_hyphae
+  anzahl: 1
+- name: wood_stripper/wood_stripper/warped_stem
+  zutat:
+  - minecraft:warped_stem
+  ergebnis: minecraft:stripped_warped_stem
+  anzahl: 1

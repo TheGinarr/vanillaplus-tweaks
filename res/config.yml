@@ -1,0 +1,349 @@
+# ====================================================================
+#  VanillaPlusTweaks – Einstellungen
+# ====================================================================
+#
+#  Jede Funktion hat einen eigenen Abschnitt mit "enabled: true/false".
+#
+#  Wann wirken Aenderungen?
+#    - Mit "/vptweaks reload" sofort: Freischalt-Termine (dimension-unlock),
+#      Elytra-Abklingzeit (elytra-boost-cooldown) und Weltgrenze (world-border).
+#    - Alles andere (Module an/aus, Rezepte, Zeitzone): erst nach einem Server-Neustart.
+#
+# ====================================================================
+
+
+# Frueherer Plugin-Name in Kleinbuchstaben, falls das Plugin umbenannt wurde (z. B. "altername").
+# Dann werden gespeicherte Kopf-Namen und Topf-Pflanzen aus der alten Version weiter erkannt.
+# Leer lassen bei einer Neuinstallation.
+legacy-namespace: ""
+
+
+# Zeitzone fuer Uhrzeit/Datum im Tab und fuer die Freischalt-Termine.
+# Sommer- und Winterzeit werden automatisch beruecksichtigt.
+timezone: Europe/Berlin
+
+
+# --------------------------------------------------------------------
+#  ALLGEMEIN
+# --------------------------------------------------------------------
+
+# Nether und End bleiben bis zu diesem Zeitpunkt gesperrt (Portale funktionieren nicht).
+# Format: JJJJ-MM-TTTHH:MM in der oben eingestellten Zeitzone. Leer ("") = sofort offen.
+# Zum Termin oeffnet sich die Dimension von selbst, ohne Neustart.
+# Wer vorher hinein darf: Recht "vptweaks.dimension.bypass" (OPs haben es NICHT automatisch).
+dimension-unlock:
+  enabled: true
+  nether: ""        # z. B. "2026-10-24T20:00"
+  end: ""           # z. B. "2026-11-07T20:00"
+
+# Nach jedem Raketen-Boost im Elytra-Flug muss man so viele Sekunden warten. 0 = keine Wartezeit.
+# Ausnahme: Recht "vptweaks.elytra.bypass".
+elytra-boost-cooldown:
+  enabled: true
+  overworld-seconds: 4.0
+  nether-seconds: 4.0
+  end-seconds: 3.0
+
+# Weltgrenze je Dimension (standardmaessig aus – sonst setzt das Plugin beim Start diese Werte).
+# diameter = Durchmesser in Bloecken (10000 = von -5000 bis +5000). 0 = Grenze nicht veraendern.
+world-border:
+  enabled: false
+  overworld:
+    center-x: 0
+    center-z: 0
+    diameter: 10000
+  nether:
+    center-x: 0
+    center-z: 0
+    diameter: 2500
+  end:
+    center-x: 0
+    center-z: 0
+    diameter: 5000
+
+# Liefert den Platzhalter %vptweaks_cpu% (100 = ein voller CPU-Kern).
+cpu-placeholder:
+  enabled: true
+
+
+# --------------------------------------------------------------------
+#  ERSATZ FUER DIE FRUEHEREN DATAPACKS
+# --------------------------------------------------------------------
+
+# "AFK Display": Wer so viele Sekunden nicht von der Stelle kommt, wird im Tab grau.
+afk:
+  enabled: true
+  seconds: 150
+
+# "Multiplayer Sleep": Chat-Meldung, wer schlafen geht.
+# percentage: wie viel Prozent der Spieler schlafen muessen, damit die Nacht vorbei ist.
+#             -1 = nicht veraendern (der aktuelle Wert der Spielregel bleibt), 0 = ein Spieler reicht.
+sleep:
+  enabled: true
+  percentage: -1
+  announce: true
+
+# "Fast Leaf Decay": Laub zerfaellt schnell, nachdem Staemme abgebaut oder gesprengt wurden.
+leaf-decay:
+  enabled: true
+
+# "Cauldron Concrete" und "Cauldron Mud": Items in einen Kessel mit Wasser werfen.
+cauldron-conversion:
+  enabled: true
+  concrete-powder: true   # Trockenbeton -> Beton
+  dirt-to-mud: true       # Erde, Grobe Erde, Wurzelerde -> Schlamm
+
+# "Silence Mobs": Tier mit einem Namensschild "silence" benennen -> es ist stumm.
+#                 "unsilence" macht es wieder laut.
+silence-mobs:
+  enabled: true
+  # Namen fuer das Namensschild. Gross-/Kleinschreibung ist egal.
+  # "silence me" usw. sind die alten Datapack-Namen und funktionieren weiter.
+  silence-names:
+    - "silence"
+    - "silence me"
+    - "silence_me"
+  unsilence-names:
+    - "unsilence"
+    - "unsilence me"
+    - "unsilence_me"
+  # Nach wie vielen Sekunden der Name "silenced" wieder verschwindet. 0 = Name bleibt.
+  # Hinweis: Benannte Monster verschwinden nicht von selbst. Ohne Namen koennen sie despawnen.
+  remove-name-after-seconds: 0
+  # Haelt man ein "unsilence"-Schild in der Hand, leuchten stumme Tiere in diesem Umkreis. 0 = aus.
+  glow-radius-while-holding-unsilence-tag: 32
+
+# "Unlock All Recipes": Alle Rezepte im Rezeptbuch freischalten (beim Betreten und nach /reload).
+unlock-all-recipes:
+  enabled: true
+
+# "Kill Empty Boats", erweitert:
+#   - automatisch: Boote, die so viele Minuten leer sind und neben denen niemand steht, werden entfernt
+#     (die Zeit laeuft nur, solange der Bereich geladen ist)
+#   - von Hand: "/vptweaks boote" entfernt sofort alle leeren Boote
+empty-boats:
+  enabled: true
+  auto-remove: true
+  empty-minutes: 10
+  keep-if-player-within: 16          # steht ein Spieler naeher (Bloecke), bleibt das Boot
+  keep-named: true                   # Boote mit Namen (Namensschild) nie entfernen
+  keep-chest-boats-with-items: true  # Kistenboote mit Inhalt nie entfernen
+  keep-leashed: true                 # angeleinte Boote nie entfernen
+
+# "XP Bottling": Mit leerer Glasflasche auf einen Zaubertisch klicken -> Erfahrungsflasche.
+xp-bottling:
+  enabled: true
+  points-per-bottle: 12
+  # Erfahrungsflasche im Ofen schmelzen -> leere Flasche + dieselbe Erfahrung zurueck
+  smelt-back: true
+  # Beim Schleichen den ganzen Flaschenstapel in der Hand auf einmal fuellen (soweit die Erfahrung reicht)
+  sneak-fills-whole-stack: true
+
+# "Custom Nether Portals": Netherportale in beliebiger Form und mit weinendem Obsidian.
+custom-nether-portals:
+  enabled: true
+  min-frame-blocks: 10        # Mindestzahl Obsidian im Rahmen (normales Portal ohne Ecken = 10)
+  max-frame-blocks: 84        # Hoechstzahl Obsidian im Rahmen
+  max-inner-blocks: 441       # Hoechstgroesse der Innenflaeche (21 x 21 wie bei Minecraft)
+  allow-crying-obsidian: true
+  allow-non-rectangular: true
+
+# "Husks Drop Sand": zusaetzlicher Sand beim Tod.
+# looting-bonus-per-level: pro Stufe Pluenderung zusaetzlich bis zu so viel Sand.
+husks-drop-sand:
+  enabled: true
+  husk:
+    min: 0
+    max: 2
+    looting-bonus-per-level: 1
+  parched:
+    min: 0
+    max: 2
+    looting-bonus-per-level: 1
+  camel-husk:
+    min: 0
+    max: 3
+    looting-bonus-per-level: 2
+
+# "Armored Elytra": Elytra + Brustplatte auf einen Amboss werfen -> gepanzerte Elytra.
+# Zerlegen: auf einen Schleifstein werfen. Geht sie kaputt oder faellt sie in Feuer/Lava,
+# werden die Teile automatisch getrennt. Bereits vorhandene gepanzerte Elytren funktionieren weiter.
+armored-elytra:
+  enabled: true
+
+
+# --------------------------------------------------------------------
+#  KOMFORT (Vanilla+)
+# --------------------------------------------------------------------
+
+# Rechtsklick auf reife Pflanzen erntet und pflanzt neu (nicht beim Schleichen).
+harvest:
+  enabled: true
+
+# Ackerland zertrampeln: never = nie, feather-falling = mit Federfall-Stiefeln geschuetzt, vanilla = normal
+trample:
+  enabled: true
+  mode: never
+  protect-from-mobs: true
+
+# Spender pflanzen Setzlinge und Saatgut auf den Block vor sich.
+dispenser-plant:
+  enabled: true
+
+# Knochenmehl zusaetzlich auf Zuckerrohr, Kaktus und Seerose.
+bonemeal-extra:
+  enabled: true
+  sugar-cane-max-height: 3
+  cactus-max-height: 3
+  lily-pad: true
+
+# Dorfbewohner folgen Spielern mit Smaragdblock in der Hand.
+villager-follow:
+  enabled: true
+  radius: 10.0
+  speed: 0.6
+  stop-distance: 2.5
+
+
+# --------------------------------------------------------------------
+#  FRUEHERE DATEN-PACKS (Rezepte, Beute, Gardener's Dream) – jetzt ebenfalls Plugin-Code
+# --------------------------------------------------------------------
+# Das Plugin bringt keine Datapacks mehr mit. Die Weltgenerierungs-Packs (Structory, DnT,
+# Geophilic, ...) bleiben als Dateien in world/datapacks – Strukturen gehen nur als Datapack.
+
+# Steinsaegen-Rezepte (stehen lesbar in daten/rezepte.yml im Plugin).
+# Jedes fruehere Pack einzeln abschaltbar. Aenderung erst nach Server-Neustart wirksam.
+stonecutter-recipes:
+  enabled: true
+  mastercutter: true                  # MasterCutter: ~1.370 Rezepte (Bloecke, Stufen, Treppen ...)
+  painting-picker: true               # Painting Picker: jedes Gemaelde gezielt aus der Steinsaege
+  wood-stripper: true                 # Wood Stripper: entrindetes Holz aus der Steinsaege
+  gardeners-dream-decorations: true   # Gardener's Dream: Deko-Toepfe und Spezial-Items
+
+# "Classic Fishing Loot": Schaetze (Sattel, Namensschild, Buecher ...) beim Angeln ueberall,
+# nicht nur in offenem Wasser – wie vor Minecraft 1.16.
+classic-fishing-loot:
+  enabled: true
+
+# "Silk Touch Budding Amethyst": Knospender Amethyst droppt mit Behutsamkeit-Spitzhacke.
+silk-touch-budding-amethyst:
+  enabled: true
+
+# "More Mob Heads": Tiere und Monster droppen ihren Kopf, wenn ein Spieler sie toetet.
+# Chance wie der Witherskelett-Schaedel in Vanilla: 2,5 % + 1 % je Stufe Pluenderung.
+# Die Koepfe (Texturen, Namen, Varianten) stehen in daten/koepfe.yml im Plugin.
+mob-heads:
+  enabled: true
+  chance: 0.025
+  looting-bonus-per-level: 0.01
+  # Eigene Chance fuer einzelne Tiere (Name wie in Minecraft), z. B.:
+  # chance-per-mob:
+  #   wither: 0.5
+  #   warden: 0.1
+  chance-per-mob: {}
+
+# "Player Head Drops": Ein Spieler, der von einem anderen Spieler getoetet wird, droppt seinen
+# Kopf mit "Killed by <Name>". Doppelte Witherskelett-Chance: 5 % + 2 % je Stufe Pluenderung.
+player-heads:
+  enabled: true
+  chance: 0.05
+  looting-bonus-per-level: 0.02
+
+# Koepfe behalten beim Hinstellen und Abbauen Namen und Beschreibung
+# (Tierkoepfe, Spielerkoepfe "Killed by ...", Deko-Toepfe).
+keep-head-names:
+  enabled: true
+
+# "Gardener's Dream": Pflanzen als Deko in Toepfe setzen. Mit der Pflanze in der Hand oben auf den
+# Topf rechtsklicken. Stock + Rechtsklick dreht die Pflanze. Leere Hand + Rechtsklick nimmt die
+# Pflanze wieder heraus (wie beim Blumentopf; beim Fass mit Schleichen). Topf abbauen -> Pflanze faellt heraus.
+# Verzierter Topf, Komposter, Fass und Ackerland: Schleichen + Rechtsklick (normaler Rechtsklick
+# gehoert dort Minecraft). Pflanzen, die in einen normalen Blumentopf passen, topft Minecraft selbst ein.
+# Braucht die Datei daten/gaertner.yml, die wegen der Lizenz nicht in der Jar ist (siehe README).
+# Ohne die Datei bleibt das Modul aus, deshalb ist es hier standardmaessig abgeschaltet.
+gardeners-dream:
+  enabled: false
+  # right-click = per Rechtsklick (Standard), sneak = wie im Datapack durch Schleichen auf dem Topf,
+  # both = beides
+  control: right-click
+  # Wie oft geprueft wird, ob der Topf unter einer Pflanze abgebaut wurde (Sekunden).
+  # Kleiner = Pflanze verschwindet schneller, kostet etwas mehr Rechenzeit. Datapack: 2 Sekunden.
+  check-interval-seconds: 2.0
+  # Halbe Toepfe auch beim schleichenden Platzieren von Kessel/Komposter (Datapack-Standard: aus)
+  half-pot-sneak-placement: false
+
+
+# --------------------------------------------------------------------
+#  BAUEN & DEKO
+# --------------------------------------------------------------------
+
+# Schere + Rechtsklick auf einen Rahmen mit Item: Rahmen unsichtbar / wieder sichtbar.
+# Faellt das Item heraus, wird der Rahmen automatisch wieder sichtbar.
+invisible-item-frames:
+  enabled: true
+  shears-durability-cost: 1
+
+# Honigwabe + Rechtsklick auf einen Rahmen mit Item: gesperrt (Item nicht entnehmbar/drehbar,
+# Rahmen im Ueberlebensmodus unzerstoerbar). Axt + Rechtsklick: entsperrt.
+item-frame-lock:
+  enabled: true
+
+# Stock + Rechtsklick auf einen Ruestungsstaender: Arme an und naechste Pose.
+# Schleichen + Stock: Bodenplatte an/aus.
+armor-stand-poses:
+  enabled: true
+
+# Stock + Rechtsklick dreht Treppen, Stufen, Staemme/Saeulen, glasierte Keramik, Kuerbisse,
+# Endstaebe und Blitzableiter. Schleichen dreht Treppen auf den Kopf.
+rotate-blocks:
+  enabled: true
+
+# Doppeltueren gehen zusammen auf und zu (Schleichen = nur eine Tuer).
+double-doors:
+  enabled: true
+
+# Dorfbewohner (und fahrende Haendler) lassen sich an die Leine nehmen.
+leash-villagers:
+  enabled: true
+  wandering-traders: true
+
+
+# --------------------------------------------------------------------
+#  ORIENTIERUNG
+# --------------------------------------------------------------------
+
+# Wegsteine: Kompass am Leitstein verlinken (Minecraft), dann mit dem Kompass schleichend in die
+# Luft rechtsklicken -> kurz stillstehen -> Teleport oben auf den Leitstein.
+# Den Kompass am Amboss benennen = Name des Wegsteins. Leere Hand + Rechtsklick auf den Leitstein
+# zeigt die Reichweite.
+waystones:
+  enabled: true
+  activation: sneak-right-click     # sneak-right-click oder right-click
+  charge-seconds: 3                 # Stillstehen vor dem Teleport (Bewegung/Schaden bricht ab)
+  cooldown-seconds: 60              # Wartezeit pro Spieler nach einem Teleport
+  # Reichweite = base-range + Punkte der Pyramide x range-per-point (0 bei max-range = unbegrenzt)
+  # Pyramide wie beim Leuchtfeuer: Ebenen 3x3, 5x5, 7x7, 9x9 unter dem Leitstein, nur volle Ebenen.
+  # Beispiel: volle Diamant-Pyramide (164 Bloecke x 4 Punkte) = 300 + 656 x 10 = 6.860 Bloecke.
+  base-range: 300
+  range-per-point: 10
+  max-range: 0
+  block-points:
+    iron_block: 1
+    gold_block: 2
+    emerald_block: 3
+    diamond_block: 4
+    netherite_block: 10
+  # Teleport zwischen Oberwelt, Nether und End (Nether-Entfernung zaehlt mal 8).
+  # Die Nether-/End-Termine gelten auch hier.
+  cross-dimension: false
+  info-on-click: true
+  # Kosten – 0 bzw. leer = aus
+  cost:
+    xp-levels: 0                    # feste Erfahrungsstufen pro Teleport
+    xp-levels-per-1000-blocks: 0    # zusaetzlich je angefangene 1000 Bloecke
+    item: ""                        # z. B. ender_pearl
+    item-amount: 0
+
+# Todespunkt: Nach dem Tod Koordinaten im Chat (nur fuer den Gestorbenen, Klick = kopieren).
+death-point:
+  enabled: true

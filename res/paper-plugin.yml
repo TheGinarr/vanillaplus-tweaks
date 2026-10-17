@@ -1,0 +1,12 @@
+name: VanillaPlusTweaks
+version: '3.0.0'
+main: vanillaplustweaks.VanillaPlusTweaks
+bootstrapper: vanillaplustweaks.TweaksBootstrap
+api-version: '26.3'
+description: Vanilla+-Funktionen als ereignisgesteuerter Ersatz fuer Datapacks, dazu Farm-, Bau- und Orientierungs-Funktionen
+dependencies:
+  server:
+    PlaceholderAPI:
+      load: BEFORE
+      required: false
+      join-classpath: true

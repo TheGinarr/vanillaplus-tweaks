@@ -1,0 +1,679 @@
+# Erzeugt aus "More Mob Heads" (Vanilla Tweaks) mit koepfe_konvertieren.py
+# Pro Tier: die erste Variante, deren 'wenn' passt, wird gedroppt.
+# Die Drop-Chance steht in der config.yml (mob-heads).
+
+allay:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.allay.ambient_without_item",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2MwMzg5MTc3ZGJhYTkyZjBkNWZmZGY4NDg4NjJjN2Y5YjM2ZGYyMjJmYmZkNzM3ZTI2MzlkYzMwNTllMGNmMyJ9fX0="}]},minecraft:item_name="Allay Head"]
+armadillo:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.armadillo.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjYwN2FlN2E3MDE3NjczMzZjMDZiMGM0ZmZhODFkZmYyY2ZkOGJjMDcwZDk1NzE0YTZiYWRmMGVmYjcyNjNlMSJ9fX0="}]},minecraft:item_name="Armadillo Head"]
+axolotl:
+  varianten:
+  - wenn:
+      variante: lucy
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.axolotl.idle_air",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjY3ZTE1ZWFiNzMwNjRiNjY4MGQxZGI5OGJhNDQ1ZWQwOTE0YmEzNWE3OTk5OTdjMGRhMmIwM2ZmYzNhODgyNiJ9fX0="}]},minecraft:item_name="Lucy Axolotl Head"]
+  - wenn:
+      variante: wild
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.axolotl.idle_air",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDdjZjAyNzQ5OThiZjVhN2YzOGIzNzAzNmUxNTRmMTEyZmEyZTI4YmFkNDBkNWE3Yzk0NzY1ZmU0ZjUyMjExZSJ9fX0="}]},minecraft:item_name="Wild Axolotl Head"]
+  - wenn:
+      variante: gold
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.axolotl.idle_air",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTU4NTYwMTE1ZmFhZDExNjE5YjNkNTVkZTc5ZWYyYTA1M2Y0NzhhNjcxOTRiYmU5MjQ3ZWRlYTBiYzk4ZTgzNCJ9fX0="}]},minecraft:item_name="Gold Axolotl Head"]
+  - wenn:
+      variante: cyan
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.axolotl.idle_air",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODUxMTk2ZDQzOTMwNjU5ZDcxN2UxYjZhMDQ2YTA4ZDEyMjBmY2I0ZTMxYzQ4NTZiYzMzZTc1NTE5ODZlZjFkIn19fQ=="}]},minecraft:item_name="Cyan Axolotl Head"]
+  - wenn:
+      variante: blue
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.axolotl.idle_air",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjhmZDEwYjBmZWY0NTk1OTYwYjFmNjQxOTNiYzhhMTg2NWEyZDJlZDQ4YjJlMmNlMDNkOTk0NTYzMDI3ZGY5NSJ9fX0="}]},minecraft:item_name="Blue Axolotl Head"]
+bat:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.bat.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2ViNTg4ZGNkMGJiNTdjZTZkZGFiOGUzYWZiNmZkNDMzMDA2NGVhYWMwMWI2MWE4ZTk3NjlmMDQ3NmY1MmY1MCJ9fX0="}]},minecraft:item_name="Bat Head"]
+bee:
+  varianten:
+  - wenn:
+      wuetend: false
+      nektar: false
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.bee.loop",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTlhYzE2ZjI5NmI0NjFkMDVlYTA3ODVkNDc3MDMzZTUyNzM1OGI0ZjMwYzI2NmFhMDJmMDIwMTU3ZmZjYTczNiJ9fX0="}]},minecraft:item_name="Bee Head"]
+  - wenn:
+      wuetend: false
+      nektar: true
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.bee.pollinate",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjcyN2QwYWIwM2Y1Y2QwMjJmODcwNWQzZjdmMTMzY2E0OTIwZWFlOGUxZTQ3YjUwNzQ0MzNhMTM3ZTY5MWU0ZSJ9fX0="}]},minecraft:item_name="Pollinated Bee Head"]
+  - wenn:
+      nektar: false
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.bee.loop_aggressive",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTQwMDIyM2YxZmE1NDc0MWQ0MjFkN2U4MDQ2NDA5ZDVmM2UxNWM3ZjQzNjRiMWI3Mzk5NDAyMDhmM2I2ODZkNCJ9fX0="}]},minecraft:item_name="Angry Bee Head"]
+  - wenn:
+      nektar: true
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.bee.loop_aggressive",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTZiNzRlMDUyYjc0Mjg4Nzk5YmE2ZDlmMzVjNWQwMjIxY2Y4YjA0MzMxNTQ3ZWMyZjY4ZDczNTk3YWUyYzliIn19fQ=="}]},minecraft:item_name="Angry Pollinated Bee Head"]
+blaze:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.blaze.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGVlMjNkYzdhMTBjNmE4N2VmOTM3NDU0YzBlOTRlZDQyYzIzYWE2NDFhOTFlZDg0NzBhMzA0MmQwNWM1MmM1MiJ9fX0="}]},minecraft:item_name="Blaze Head"]
+bogged:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.bogged.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGY4MDdhMTg3MDc3ZjgzNmI5MzgyMGIzMmQ4ZDgzNDFkNGQzMmNkNGM4YzExMTVjZjFkYTYzNzRlMGZiZDNmZiJ9fX0="}]},minecraft:item_name="Bogged Head"]
+breeze:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.breeze.idle_air",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTI3NTcyOGFmN2U2YTI5Yzg4MTI1YjY3NWEzOWQ4OGFlOTkxOWJiNjFmZGMyMDAzMzdmZWQ2YWIwYzQ5ZDY1YyJ9fX0="}]},minecraft:item_name="Breeze Head"]
+camel:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.camel.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTY3ZDQ1OTczNDAxNjZlMTk3OGE2NjhhMDZiZjU3NTZjMTdiNGNiNWI0MGFiOGZmMjQ0MDkzYjZiOGJjNzVkMyJ9fX0="}]},minecraft:item_name="Camel Head"]
+camel_husk:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.camel_husk.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzdkNDM0NjNkODQ4OTQxMTU5NDMwYTIzMmI0ZDVjMTdiM2I4NDJmODY2YjU0YTMzZTc0ODQ3NmU0MDg3NDc0NyJ9fX0="}]},minecraft:item_name="Camel Husk Head"]
+cat:
+  varianten:
+  - wenn:
+      variante: tabby
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.cat.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGUyOGQzMGRiM2Y4YzNmZTUwY2E0ZjI2ZjMwNzVlMzZmMDAzYWU4MDI4MTM1YThjZDY5MmYyNGM5YTk4YWUxYiJ9fX0="}]},minecraft:item_name="Tabby Cat Head"]
+  - wenn:
+      variante: black
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.cat.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGZkMTBjOGU3NWY2NzM5OGM0NzU4N2QyNWZjMTQ2ZjMxMWMwNTNjYzVkMGFlYWI4NzkwYmNlMzZlZTg4ZjVmOCJ9fX0="}]},minecraft:item_name="Tuxedo Cat Head"]
+  - wenn:
+      variante: red
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.cat.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjExM2RiZDNjNmEwNzhhMTdiNGVkYjc4Y2UwN2Q4MzZjMzhkYWNlNTAyN2Q0YjBhODNmZDYwZTdjYTdhMGZjYiJ9fX0="}]},minecraft:item_name="Ginger Cat Head"]
+  - wenn:
+      variante: siamese
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.cat.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDViM2Y4Y2E0YjNhNTU1Y2NiM2QxOTQ0NDk4MDhiNGM5ZDc4MzMyNzE5NzgwMGQ0ZDY1OTc0Y2M2ODVhZjJlYSJ9fX0="}]},minecraft:item_name="Siamese Cat Head"]
+  - wenn:
+      variante: british_shorthair
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.cat.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTM4OWUwZDVkM2U4MWY4NGI1NzBlMjk3ODI0NGIzYTczZTVhMjJiY2RiNjg3NGI0NGVmNWQwZjY2Y2EyNGVlYyJ9fX0="}]},minecraft:item_name="British Shorthair Cat Head"]
+  - wenn:
+      variante: calico
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.cat.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzQwMDk3MjcxYmI2ODBmZTk4MWU4NTllOGJhOTNmZWEyOGI4MTNiMTA0MmJkMjc3ZWEzMzI5YmVjNDkzZWVmMyJ9fX0="}]},minecraft:item_name="Calico Cat Head"]
+  - wenn:
+      variante: persian
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.cat.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmY0MGM3NDYyNjBlZjkxYzk2YjI3MTU5Nzk1ZTg3MTkxYWU3Y2UzZDVmNzY3YmY4Yzc0ZmFhZDk2ODlhZjI1ZCJ9fX0="}]},minecraft:item_name="Persian Cat Head"]
+  - wenn:
+      variante: ragdoll
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.cat.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGM3YTQ1ZDI1ODg5ZTNmZGY3Nzk3Y2IyNThlMjZkNGU5NGY1YmMxM2VlZjAwNzk1ZGFmZWYyZTgzZTBhYjUxMSJ9fX0="}]},minecraft:item_name="Ragdoll Cat Head"]
+  - wenn:
+      variante: white
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.cat.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjFkMTVhYzk1NThlOThiODlhY2E4OWQzODE5NTAzZjFjNTI1NmMyMTk3ZGQzYzM0ZGY1YWFjNGQ3MmU3ZmJlZCJ9fX0="}]},minecraft:item_name="White Cat Head"]
+  - wenn:
+      variante: jellie
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.cat.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTBkYjQxMzc2Y2E1N2RmMTBmY2IxNTM5ZTg2NjU0ZWVjZmQzNmQzZmU3NWU4MTc2ODg1ZTkzMTg1ZGYyODBhNSJ9fX0="}]},minecraft:item_name="Jellie Cat Head"]
+  - wenn:
+      variante: all_black
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.cat.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjJjMWU4MWZmMDNlODJhM2U3MWUwY2Q1ZmJlYzYwN2UxMTM2MTA4OWFhNDdmMjkwZDQ2YzhhMmMwNzQ2MGQ5MiJ9fX0="}]},minecraft:item_name="Black Cat Head"]
+cave_spider:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.spider.step",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTZhMWMyNTk5ZmM5MTIwM2E2NWEwM2Q0NzljOGRjODdmNjYyZGVhYzM2NjNjMTZjNWUwNGQ2MjViMzk3OGEyNSJ9fX0="}]},minecraft:item_name="Cave Spider Head"]
+chicken:
+  varianten:
+  - wenn:
+      variante: warm
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.chicken.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2Q2NmIwYTM1NWFhMjdmMzY0OWRmZjQwODBmZTkyYWI1ZjJhMWUxOWJhOGM3ZjE1Y2E2NzUwNjg0M2RlYTBkNyJ9fX0="}]},minecraft:item_name="Warm Chicken Head"]
+  - wenn:
+      variante: cold
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.chicken.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTA3NzM2MWExOGZjMWRjM2EwYzhlMmNlZTEyMmRiNmNkMGUyZmIwODAzMzU0OGFlOWM0N2U2ZjMzZmE0ZGIzOCJ9fX0="}]},minecraft:item_name="Cold Chicken Head"]
+  - wenn:
+      variante: temperate
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.chicken.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDJhZjZlNTg0N2VlYTA5OWUxYjBhYjhjMjBhOWU1ZjNjNzE5MDE1OGJkYTU0ZTI4MTMzZDliMjcxZWMwY2I0YiJ9fX0="}]},minecraft:item_name="Temperate Chicken Head"]
+cod:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.cod.flop",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjI0NmUxOWIzMmNmNzg0NTQ5NDQ3ZTA3Yjk2MDcyZTFmNjU2ZDc4ZTkzY2NjYTU2Mzc0ODVlNjc0OTczNDY1MiJ9fX0="}]},minecraft:item_name="Cod Head"]
+copper_golem:
+  varianten:
+  - wenn:
+      verwitterung: oxidized
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.copper_golem_oxidized.spin",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjZhNDU5ODQyMGMzZjIwNDk5NjJkZTQ5MzYzMTdhMzZkMjUwZDEzZDY1MDJhYzdjY2M2MmY1NWExMzdiZGUzNyJ9fX0="}]},minecraft:item_name="Oxidized Copper Golem Head"]
+  - wenn:
+      verwitterung: weathered
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.copper_golem_weathered.spin",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDUxNzk1YzQzOWY1ZTJjNGIwOGQ5MDI3MjEyN2YyOWNiNGUwYjFhN2Q0ZWViNjg3NTkxYWE1ODAwMzgwMmExYSJ9fX0="}]},minecraft:item_name="Weathered Copper Golem Head"]
+  - wenn:
+      verwitterung: exposed
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.copper_golem_weathered.spin",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWFjMjg0NGMzMDA5N2M5NjQ2MmQ0OGFkYTA2NGNmOWFhZTM2NmFhMTFmZGMxNTY5ZWNlODYwZjcyMGQxYzllMCJ9fX0="}]},minecraft:item_name="Exposed Copper Golem Head"]
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.copper_golem.spin",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWY0MGMxYmVjMTIyMjY1ZTk3OWU0Mzc4ZGM4ZDhiMTNiZDkyNmVkMmFkODk4NGY0OTNlYjQ2Zjc1NDQ3NDcxNyJ9fX0="}]},minecraft:item_name="Copper Golem Head"]
+cow:
+  varianten:
+  - wenn:
+      variante: warm
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.cow.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmYzNDRjOTk0MmFjMzU3ODlmYTZjMWQ2MDI4NzZjOWY1NmY2OGYwMmU2NzBkZTBmZjgxYjdjODMxNjEwZmY1YSJ9fX0="}]},minecraft:item_name="Warm Cow Head"]
+  - wenn:
+      variante: cold
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.cow.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDI4ZDQwNTA3YTBlYzUxMmNkOTA4NGM2ZGI4NzRlNDAzZmQzOTYxMjA1NzQxMzJhNjhjZTEwY2FmZGQ3YjY3YyJ9fX0="}]},minecraft:item_name="Cold Cow Head"]
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.cow.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDhmZGM2NWUzYmEwOWMxMmJjMWQ2OGZmZmIzM2Q2MzQzMDVjMDE0MjMxYjNkNDJhODg4ZTMzNmFlNDkwMDkwZiJ9fX0="}]},minecraft:item_name="Temperate Cow Head"]
+creaking:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.creaking.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmMwNzdjOTc1ZjEzZGJkYWVkYTVmMGQyMDE2ZWIzYWY1MWU0YzI3ZDk3MTRhMTIzYzQxMjg5MDE1MDVjNzg4YyJ9fX0="}]},minecraft:item_name="Creaking Head"]
+creeper:
+  varianten:
+  - wenn:
+      aufgeladen: true
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.generic.explode",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzUxMWU0YTNkNWFkZDZhNTQ0OTlhYmFkMTBkNzk5ZDA2Y2U0NWNiYTllNTIwYWZkMjAwODYwOGE2Mjg4YjdlNyJ9fX0="}]},minecraft:item_name="Charged Creeper Head"]
+dolphin:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.dolphin.ambient_water",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGU5Njg4Yjk1MGQ4ODBiNTViN2FhMmNmY2Q3NmU1YTBmYTk0YWFjNmQxNmY3OGU4MzNmNzQ0M2VhMjlmZWQzIn19fQ=="}]},minecraft:item_name="Dolphin Head"]
+donkey:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.donkey.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGUyNWVlOTI3M2FkNTc5ZDQ0YmY0MDZmNmY2Mjk1NTg2NDgxZWExOThmZDU3MjA3NmNkMGM1ODgyZGE3ZTZjYyJ9fX0="}]},minecraft:item_name="Donkey Head"]
+drowned:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.drowned.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzNmN2NjZjYxZGJjM2Y5ZmU5YTYzMzNjZGUwYzBlMTQzOTllYjJlZWE3MWQzNGNmMjIzYjNhY2UyMjA1MSJ9fX0="}]},minecraft:item_name="Drowned Head"]
+elder_guardian:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.elder_guardian.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGEyZDY0ZjRhMDBlOWM4NWY2NzI2MmVkY2FjYjg0NTIzNTgxYWUwZjM3YmRhYjIyZGQ3MDQ1MjRmNjJlMTY5ZiJ9fX0="}]},minecraft:item_name="Elder Guardian Head"]
+enderman:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.enderman.scream",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODk3N2E5NGYwMjQ5OGNhZDBjZmRiNjVjYTdjYjcyZTIzMTExYTkxNGQ4YzY3MGFjY2NjN2E2NWIzNDdkNzc3NiJ9fX0="}]},minecraft:item_name="Enderman Head"]
+endermite:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.endermite.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGM2YjY1YzIyYjQ0NjViYTY3OTNiMjE5NWNkNTA4NGNlODNiODhkY2E2ZTU1ZWI5NDg0NTQwYWNkNzM1MmE1MCJ9fX0="}]},minecraft:item_name="Endermite Head"]
+evoker:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.evoker.prepare_attack",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzkwZmJkODhmNjU5ZDM5NjNjNjhjYmJjYjdjNzEyMWQ4MTk1YThiZTY1YmJkMmJmMTI1N2QxZjY5YmNjYzBjNyJ9fX0="}]},minecraft:item_name="Evoker Head"]
+fox:
+  varianten:
+  - wenn:
+      variante: red
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.fox.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDdlMDA0MzExMWJjNTcwOTA4NTYyNTkxNTU1NzFjNzkwNmU3MDcwNDZkZjA0MWI4YjU3MjcwNGM0NTFmY2Q4MiJ9fX0="}]},minecraft:item_name="Fox Head"]
+  - wenn:
+      variante: snow
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.fox.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDE0MzYzNzdlYjRjNGI0ZTM5ZmIwZTFlZDg4OTlmYjYxZWUxODE0YTkxNjliOGQwODcyOWVmMDFkYzg1ZDFiYSJ9fX0="}]},minecraft:item_name="Snow Fox Head"]
+frog:
+  varianten:
+  - wenn:
+      variante: cold
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.frog.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzY4Nzc4OTNlOTIwZmY1ZGZhNGI1ZmJkMTRkYWJlZTJlNjMwOGE2Zjk3YzNhMTliMDhlMjQxYTI5ZWI5YTVjMyJ9fX0="}]},minecraft:item_name="Cold Frog Head"]
+  - wenn:
+      variante: temperate
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.frog.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTUwZDEwNzNkNDFmMTkzNDA1ZDk1YjFkOTQxZjlmZTFhN2ZmMDgwZTM4MTU1ZDdiYjc4MGJiYmQ4ZTg2ZjcwZCJ9fX0="}]},minecraft:item_name="Temperate Frog Head"]
+  - wenn:
+      variante: warm
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.frog.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDViMGRhNDM5NzViODNjMzMyMjc4OGRkYTMxNzUwNjMzMzg0M2FlYmU1NTEyNzg3Y2IyZTNkNzY5ZWQyYjM4MiJ9fX0="}]},minecraft:item_name="Warm Frog Head"]
+ghast:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.ghast.warn",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzUzZGUzMWEyZDAwNDFhNmVmNzViZjdhNmM4NDY4NDY0ZGIxYWFhNjIwMWViYjFhNjAxM2VkYjIyNDVjNzYwNyJ9fX0="}]},minecraft:item_name="Ghast Head"]
+glow_squid:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.glow_squid.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGIyZTliNjU4MWZlZDQ4YTk5ZTAzMjMwOTFhZDVjM2MzMjZjZGEyMDA3M2UyOGE5MDJhMDM3M2Y3MzgyYjU5ZiJ9fX0="}]},minecraft:item_name="Glow Squid Head"]
+goat:
+  varianten:
+  - wenn:
+      schreiend: false
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.goat.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODc0NzNlMDU1ZGY2ZTdmZDk4NjY0ZTlmZGI2MzY3NWYwODgxMDYzMDVkNzQ0MDI0YTQxYmIzNTg5MThhMTQyYiJ9fX0="}]},minecraft:item_name="Goat Head"]
+  - wenn:
+      schreiend: true
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.goat.screaming.prepare_ram",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmRhNDg1YWMyMzUxMjQyMDg5MWE1YWUxZThkZTk4OWYwOTFkODQ4ZDE1YTkwNjhkYTQ3MjBkMzE2ZmM0MzMwZiJ9fX0="}]},minecraft:item_name="Screaming Goat Head"]
+guardian:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.elder_guardian.flop",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTJiYTM0NDE2NjcwNDU0YjFhMjA0OTZmODBiOTM5ODUyOWY0OTAwM2ZjNjEzZWI5MzAyNDhlYTliNWQxYTM5MSJ9fX0="}]},minecraft:item_name="Guardian Head"]
+happy_ghast:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.happy_ghast.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzUwNWIwNjIwNzhkOTc1M2RkYjliYzBlZjBmNGUzMjMxM2QzN2JhNTA4NDBkYjg3NDU4YzdmNmNiY2ZmNDgwYyJ9fX0="}]},minecraft:item_name="Happy Ghast Head"]
+hoglin:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.hoglin.angry",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmM0YTdmNTdmYzAzYjEzYWEyZjlkODNjZGQ0ODIyYjkzNjc5MzA5NmRhZjUxZTc4MDI1YmJkMjQxZWQ2ZjY4ZCJ9fX0="}]},minecraft:item_name="Hoglin Head"]
+horse:
+  varianten:
+  - wenn:
+      variante: white
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.horse.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzdiYzYxNjA5NzMwZjJjYjAxMDI2OGZhYjA4MjFiZDQ3MzUyNjk5NzUwYTE1MDU5OWYyMWMzZmM0ZTkyNTkxYSJ9fX0="}]},minecraft:item_name="White Horse Head"]
+  - wenn:
+      variante: creamy
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.horse.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDJhMGQ1NGNjMDcxMjY3ZDZiZmQ1ZjUyM2Y4Yzg5ZGNmZGM1ZTgwNWZhYmJiNzYwMTBjYjNiZWZhNDY1YWE5NCJ9fX0="}]},minecraft:item_name="Creamy Horse Head"]
+  - wenn:
+      variante: chestnut
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.horse.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmM4NzIwZDFmNTUyNjkzYjQwYTlhMzNhZmE0MWNlZjA2YWZkMTQyODMzYmVkOWZhNWI4ODdlODhmMDVmNDlmYSJ9fX0="}]},minecraft:item_name="Chestnut Horse Head"]
+  - wenn:
+      variante: brown
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.horse.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjc3MTgwMDc3MGNiNGU4MTRhM2Q5MTE4NmZjZDc5NWVjODJlMDYxMDJmZjdjMWVlNGU1YzM4MDEwMmEwYzcwZiJ9fX0="}]},minecraft:item_name="Brown Horse Head"]
+  - wenn:
+      variante: black
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.horse.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjcyM2ZhNWJlNmFjMjI5MmE3MjIzMGY1ZmQ3YWI2NjM0OTNiZDhmN2U2NDgxNjQyNGRjNWJmMjRmMTMzODkwYyJ9fX0="}]},minecraft:item_name="Black Horse Head"]
+  - wenn:
+      variante: gray
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.horse.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzI1OTg2MTAyMTgxMDgzZmIzMTdiYzU3MTJmNzEwNGRhYTVhM2U4ODkyNjRkZmViYjkxNTlmNmUwOGJhYzkwYyJ9fX0="}]},minecraft:item_name="Gray Horse Head"]
+  - wenn:
+      variante: dark_brown
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.horse.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2YyMzQxYWFhMGM4MmMyMmJiYzIwNzA2M2UzMTkyOTEwOTdjNTM5YWRhZDlhYTkxM2ViODAwMWIxMWFhNTlkYSJ9fX0="}]},minecraft:item_name="Dark Brown Horse Head"]
+husk:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.husk.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzMzODMxOGJjOTFhMzZjZDVhYjZhYTg4NWM5YTRlZTJiZGFjZGFhNWM2NmIyYTk5ZGZiMGE1NjA5ODNmMjQ4MCJ9fX0="}]},minecraft:item_name="Husk Head"]
+illusioner:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.illusioner.cast_spell",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDM4MjcwMWM2N2Q2YzU0YzkwNzU1ODg5MWRjMTc2MjI1MTEyNTE4NzcxZTA2MWM1ZDhiZDkxODQ3OWU2YmRkOCJ9fX0="}]},minecraft:item_name="Illusioner Head"]
+iron_golem:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.iron_golem.hurt",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmU3YzA3MTlmYWJlMTE2ZGNlNjA1MTk5YmNhZGM2OWE1Mzg4NjA4NjRlZjE1NzA2OTgzZmY2NjI4MjJkOWZlMyJ9fX0="}]},minecraft:item_name="Iron Golem Head"]
+llama:
+  varianten:
+  - wenn:
+      variante: creamy
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.llama.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGQ2N2ZkNGJmZjI5MzI2OWNiOTA4OTc0ZGNhODNjMzM0ODVlNDM1ZWQ1YThlMWRiZDY1MjFjNjE2ODcxNDAifX19"}]},minecraft:item_name="Creamy Llama Head"]
+  - wenn:
+      variante: white
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.llama.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODAyNzdlNmIzZDlmNzgxOWVmYzdkYTRiNDI3NDVmN2FiOWE2M2JhOGYzNmQ2Yjg0YTdhMjUwYzZkMWEzNThlYiJ9fX0="}]},minecraft:item_name="White Llama Head"]
+  - wenn:
+      variante: brown
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.llama.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzJiMWVjZmY3N2ZmZTNiNTAzYzMwYTU0OGViMjNhMWEwOGZhMjZmZDY3Y2RmZjM4OTg1NWQ3NDkyMTM2OCJ9fX0="}]},minecraft:item_name="Brown Llama Head"]
+  - wenn:
+      variante: gray
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.llama.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2YyNGU1NmZkOWZmZDcxMzNkYTZkMWYzZTJmNDU1OTUyYjFkYTQ2MjY4NmY3NTNjNTk3ZWU4MjI5OWEifX19"}]},minecraft:item_name="Gray Llama Head"]
+magma_cube:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.magma_cube.squish",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjgxNzE4ZDQ5ODQ4NDdhNGFkM2VjMDgxYTRlYmZmZDE4Mzc0MzIzOWFlY2FiNjAzMjIxMzhhNzI2MDk4MTJjMyJ9fX0="}]},minecraft:item_name="Magma Cube Head"]
+mooshroom:
+  varianten:
+  - wenn:
+      variante: red
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.cow.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmVlNDI4OGQ4NzMzM2ZkN2ExZDZmZWY0OWQ1ZTQ2ODQ3YzczN2M4MTZkMTlhODk1MDM1MDM4MWU0NzU3ZjM0OSJ9fX0="}]},minecraft:item_name="Red Mooshroom Head"]
+  - wenn:
+      variante: brown
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.cow.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDE2ODcxMDk5YmI1NTM3MDBmNDY2ZDdiOGY2MDA5YTEwYTRmZTFmZjQ2MjQwOWNkZTZhY2E1Yzg5OGIyNjE5YiJ9fX0="}]},minecraft:item_name="Brown Mooshroom Head"]
+mule:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.mule.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDFjMjI0YTEwMzFiZTQzNGQyNWFlMTg4NWJmNGZmNDAwYzk4OTRjNjliZmVmNTZhNDkzNTRjNTYyNWMwYzA5YyJ9fX0="}]},minecraft:item_name="Mule Head"]
+nautilus:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.nautilus.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwOGNmOTkwMDM5OTA2MGM5MjgwYzZiM2I4OGNiZTUzNmU3MjJjMGVlYmM5MzJhOWM1ZmEwMTQwZDAzNjJmYyJ9fX0="}]},minecraft:item_name="Nautilus Shell"]
+ocelot:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.ocelot.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTE3NWNjNDNlYThhZTIwMTY4YTFmMTcwODEwYjRkYTRkOWI0ZWJkM2M5OTc2ZTlmYzIyZTlmOTk1YzNjYmMzYyJ9fX0="}]},minecraft:item_name="Ocelot Head"]
+panda:
+  varianten:
+  - wenn:
+      hauptgen: aggressive
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.panda.aggressive_ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTU0NmU0MzZkMTY2YjE3ZjA1MjFiZDg1MzhlYTEzY2Q2ZWUzYjVkZjEwMmViMzJlM2U0MjVjYjI4NWQ0NDA2MyJ9fX0="}]},minecraft:item_name="Aggressive Panda Head"]
+  - wenn:
+      hauptgen: lazy
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.panda.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTg3ZjFmNWRiMmUyNGRmNGRhYWVkNDY4NWQ2YWVlNWRlYjdjZGQwMjk2MzBmMDA3OWMxZjhlMWY5NzQxYWNmZCJ9fX0="}]},minecraft:item_name="Lazy Panda Head"]
+  - wenn:
+      hauptgen: playful
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.panda.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGNhZGQ0YmYzYzRjYWNlOTE2NjgwZTFmZWY5MGI1ZDE2YWQ2NjQzOTUxNzI1NjY4YmE2YjQ5OTZiNjljYTE0MCJ9fX0="}]},minecraft:item_name="Playful Panda Head"]
+  - wenn:
+      hauptgen: worried
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.panda.worried_ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmI4NmZkMWJmOGNiY2UyM2JjMDhmYjkwNjkxNzE3NjExYWRkYzg1YWI4MjNiNzcxNGFlYzk4YTU2NjBlZmYxNSJ9fX0="}]},minecraft:item_name="Worried Panda Head"]
+  - wenn:
+      hauptgen: brown
+      nebengen: brown
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.panda.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWQ1ZjZkNjEyNjcyODY3MWI0NGMxYzc3NWY5OTYxNzQyNGUzMzYxMWI1ZDMxYWQyYWNmZjI4MDRlYjk2ZWIwNiJ9fX0="}]},minecraft:item_name="Brown Panda Head"]
+  - wenn:
+      hauptgen: weak
+      nebengen: weak
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.panda.sneeze",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2M1NmEzNTVmYmUwZTJmYmQyOGU4NWM0ZDgxNWZmYTVkMWY5ZDVmODc5OGRiYzI1OWZmODhjNGFkZGIyMDJhZSJ9fX0="}]},minecraft:item_name="Weak Panda Head"]
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.panda.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTlkZjQ3ZTAxNWQ1YzFjNjhkNzJiZTExYmI2NTYzODBmYzZkYjUzM2FhYjM4OTQxYTkxYjFkM2Q1ZTM5NjQ5NyJ9fX0="}]},minecraft:item_name="Panda Head"]
+parched:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.parched.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjRhZWNlZmY1ZjI2ZGQ4NDEzYzVjMDM1NDdjMjM0YWMwMzEwOGQxODdhZjBiOWNkODM0YThjZTEyNTk4NTkxYyJ9fX0="}]},minecraft:item_name="Parched Head"]
+parrot:
+  varianten:
+  - wenn:
+      variante: red_blue
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.parrot.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDBhM2Q0N2Y1NGU3MWE1OGJmOGY1N2M1MjUzZmIyZDIxM2Y0ZjU1YmI3OTM0YTE5MTA0YmZiOTRlZGM3NmVhYSJ9fX0="}]},minecraft:item_name="Red Parrot Head"]
+  - wenn:
+      variante: blue
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.parrot.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjk0YmQzZmNmNGQ0NjM1NGVkZThmZWY3MzEyNmRiY2FiNTJiMzAxYTFjOGMyM2I2Y2RmYzEyZDYxMmI2MWJlYSJ9fX0="}]},minecraft:item_name="Blue Parrot Head"]
+  - wenn:
+      variante: green
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.parrot.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmExZGMzMzExNTIzMmY4MDA4MjVjYWM5ZTNkOWVkMDNmYzE4YWU1NTNjMjViODA1OTUxMzAwMGM1OWUzNTRmZSJ9fX0="}]},minecraft:item_name="Green Parrot Head"]
+  - wenn:
+      variante: yellow_blue
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.parrot.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzI2OGNlMzdiZTg1MDdlZDY3ZTNkNDBiNjE3ZTJkNzJmNjZmOWQyMGIxMDZlZmIwOGU2YmEwNDFmOWI5ZWYxMCJ9fX0="}]},minecraft:item_name="Light Blue Parrot Head"]
+  - wenn:
+      variante: gray
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.parrot.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzFiZTcyM2FhMTczOTNkOTlkYWRkYzExOWM5OGIyYzc5YzU0YjM1ZGViZTA1YzcxMzhlZGViOGQwMjU2ZGM0NiJ9fX0="}]},minecraft:item_name="Gray Parrot Head"]
+phantom:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.phantom.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2U5NTE1M2VjMjMyODRiMjgzZjAwZDE5ZDI5NzU2ZjI0NDMxM2EwNjFiNzBhYzAzYjk3ZDIzNmVlNTdiZDk4MiJ9fX0="}]},minecraft:item_name="Phantom Head"]
+pig:
+  varianten:
+  - wenn:
+      variante: warm
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.pig.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2JlYmExYTJkNTZlODRmOGU1MWZlZDY2NTlmMmNiN2MxNGZlZDQzODU5YWY1ODQ3Mzc4OTdiZjcwYzAzOTQ3NSJ9fX0="}]},minecraft:item_name="Warm Pig Head"]
+  - wenn:
+      variante: cold
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.pig.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmExOGQ0MDQzY2Q2YzkwMzg2Njc4ODkxNGZkNTM0MzE1MjgxYWY5ZjI1OWUzNDgzN2UzZTE3NWU1NDVjMmVkZSJ9fX0="}]},minecraft:item_name="Cold Pig Head"]
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.pig.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDFlZTc2ODFhZGYwMDA2N2YwNGJmNDI2MTFjOTc2NDEwNzVhNDRhZTJiMWMwMzgxZDVhYzZiMzI0NjIxMWJmZSJ9fX0="}]},minecraft:item_name="Temperate Pig Head"]
+piglin_brute:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.piglin_brute.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjQ4ODc5OWM4M2VjYjI5NDUyY2ViYTg5YzNjMDA5OTIxOTI3NGNlNWIyYmZiOGFkMGIzZWE0YzY1ZmFjNDYzMCJ9fX0="}]},minecraft:item_name="Piglin Brute Head"]
+pillager:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.pillager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzIyNWYwYjQ5YzUyOTUwNDhhNDA5YzljNjAxY2NhNzlhYThlYjUyYWZmNWUyMDMzZWJiODY1ZjQzNjdlZjQzZSJ9fX0="}]},minecraft:item_name="Pillager Head"]
+polar_bear:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.polar_bear.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2Q4NzAyOTExZTYxNmMwZDMyZmJlNzc4ZDE5NWYyMWVjY2U5MDI1YmNiZDA5MTUxZTNkOTdhZjMxOTJhYTdlYyJ9fX0="}]},minecraft:item_name="Polar Bear Head"]
+pufferfish:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.puffer_fish.blow_up",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTI3MzNkNWRhNTljODJlYWYzMTBiMzgyYWZmNDBiZDUxM2M0NDM1NGRiYmFiZmUxNGIwNjZhNTU2ODEwYTdmOSJ9fX0="}]},minecraft:item_name="Pufferfish Head"]
+rabbit:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.rabbit.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODA1YzVmZTgwYmEyYTBlODAwNGM5Y2FhMjcyM2U3ODY0YWNjOTMyMjlkZjJjOGUwYjI3YjcxZjgxNTNlZGIyNyJ9fX0="}]},minecraft:item_name="Toast Rabbit Head"]
+  - wenn:
+      variante: brown
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.rabbit.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGU3ZDIyMTExYWFlM2U4ODQ2ZjhlYzQ1YzUyNDgzZjM3NDU5MWVlNWEzNmM0OThiNGEwNjAwYzQ1YzA5ZTdiNSJ9fX0="}]},minecraft:item_name="Brown Rabbit Head"]
+  - wenn:
+      variante: white
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.rabbit.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2E5NjE1NWJiNjUxM2JmZDExOTE5NGQ1OGNmMThlNmVlOThmZTVlYmU3ZjM0ZjU5YzRlYzEwYzBkNWVhOWYzNyJ9fX0="}]},minecraft:item_name="White Rabbit Head"]
+  - wenn:
+      variante: black
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.rabbit.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmE3N2IwZTQ1NWMxZGQyNTMyYmVlODk4Mjk4ZDg5NjRhNjEwMzc5ZDU2MTgwZmFlMzQ0YjBkMjY2YTAzNDNjNiJ9fX0="}]},minecraft:item_name="Black Rabbit Head"]
+  - wenn:
+      variante: white_splotched
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.rabbit.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTFjM2I2ZmMwMDNkZDY0NDliM2M1M2JkYzM2YjIzMGJmZWQ5YmNmYTFkOWY4MGJhZWVkODk1MmU2ZTk2NjNkZCJ9fX0="}]},minecraft:item_name="Black and White Rabbit Head"]
+  - wenn:
+      variante: gold
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.rabbit.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTA2Mjc0NDBlMmIwOTI1NTkyOTkwMjliOWRhNjMxZjUyZWQ2ZTQ1MTk0YmRmZWYwN2FmNjlkNzllYWYxNjUyMSJ9fX0="}]},minecraft:item_name="Gold Rabbit Head"]
+  - wenn:
+      variante: salt
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.rabbit.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjY1MzhkNzRhN2EwZjAzOWMzMzU3NGIyNDNkZGY3NTk4OWFlMDM4YzdlZTdkZTFjMDE3NDdmYjg4MTNmMTRmIn19fQ=="}]},minecraft:item_name="Salt and Pepper Rabbit Head"]
+  - wenn:
+      variante: evil
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.rabbit.attack",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzIzM2Q2YTJlMmE2NDFhN2MwNGQzZjNkMjM1NmZmYWM0MTE1MzdhMjM5ZjM3YjMzZDYzZDY2YjQzYmMxZThmNSJ9fX0="}]},minecraft:item_name="The Killer Bunny Head"]
+ravager:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.ravager.roar",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWI0ZGIyOTg2MTQwZTI1MWUzMmU3MGVkMDhjOGEwODE3MjAzMTNjZTI1NzYzMmJlMWVmOTRhMDczNzM5NGRiIn19fQ=="}]},minecraft:item_name="Ravager Head"]
+salmon:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.salmon.flop",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzkxZDllNjliNzk1ZGE0ZWFhY2ZjZjczNTBkZmU4YWUzNjdmZWQ4MzM1NTY3MDZlMDQwMzM5ZGQ3ZmUwMjQwYSJ9fX0="}]},minecraft:item_name="Salmon Head"]
+sheep:
+  varianten:
+  - wenn:
+      name: jeb_
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.sheep.shear",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjMzMzI2NzY1YTE5MGViZjkwZDU0ODZkNzFmMjBlMjU5N2U0YmVlMmEzOTFmZWNiYmQ4MGRlYmZlMWY4MmQ3OCJ9fX0="}]},minecraft:item_name="\"jeb_ Sheep Head\""]
+  - wenn:
+      farbe: white
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.sheep.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmRmZTdjYzQ2ZDc0OWIxNTMyNjFjMWRjMTFhYmJmMmEzMTA4ZWExYmEwYjI2NTAyODBlZWQxNTkyZGNmYzc1YiJ9fX0="}]},minecraft:item_name="White Sheep Head"]
+  - wenn:
+      farbe: orange
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.sheep.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjA1OTM0MjQ3NGI2MjY1Y2ZjM2VhZWViZmY4MGVjYWEwNWQxMGY3NDA5NzQyMzUwN2YzYWJiZDU0MGYwNzY3OCJ9fX0="}]},minecraft:item_name="Orange Sheep Head"]
+  - wenn:
+      farbe: magenta
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.sheep.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjI0NmE3YmY5YzhmNjk4Nzc1M2VkNjI1ZWNlMDMxOGJkYWY3ZThlNGMwNDlkNjk1NzYyODExZGU3MTU4ZGYyNyJ9fX0="}]},minecraft:item_name="Magenta Sheep Head"]
+  - wenn:
+      farbe: light_blue
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.sheep.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmNkZWM2ZGIxMjIyYjFiZjdiNzJkMzBhM2RkNmMyYmMwNDQxZjA1YTY0NWQzM2RlNTc1MDQ2Yjk0NDEwNmZmYSJ9fX0="}]},minecraft:item_name="Light Blue Sheep Head"]
+  - wenn:
+      farbe: yellow
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.sheep.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjYxYzAxYWE2NWRmZDZhNjEyMGI5ZDA3OTM2YWE2ZWRmMmM1NmUyZDk3MmMyYjU2OWMxNzhjMzA4YjBmNjZlNyJ9fX0="}]},minecraft:item_name="Yellow Sheep Head"]
+  - wenn:
+      farbe: lime
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.sheep.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2YwOWNmYjM4YzIyMTczNDYzYTBlZmVkZmQ3ZjNmMzc2MmVlZDI1OTM2YWUwMDYxZmYzYzFlOTVkYzBkYzIwYyJ9fX0="}]},minecraft:item_name="Lime Sheep Head"]
+  - wenn:
+      farbe: pink
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.sheep.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWFlODNiMDEzYzMwOWE1ODQxOGE1ZDljNGM4MmVhZTU1NTBlZjQyNmFhZDhmOTEzY2Q1OTg4YTM1OGMxODhmZSJ9fX0="}]},minecraft:item_name="Pink Sheep Head"]
+  - wenn:
+      farbe: gray
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.sheep.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzJkMjU0NzllMTY1ZWI3NzAzYmIxMDBjNTVkMTZiMDdkYjhjNWZkOTNhNzNlNTI1YjNkZTkxZTA3NTA0MDg4MyJ9fX0="}]},minecraft:item_name="Gray Sheep Head"]
+  - wenn:
+      farbe: light_gray
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.sheep.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTIyMDMwYTQwZDlhOWI5MjQ1OGY3ZjZhNGY3OGQxOGQ0OTRmYzRlODcxMWYzOWI1NzViMmVmOGNiY2JlYWE2ZCJ9fX0="}]},minecraft:item_name="Light Gray Sheep Head"]
+  - wenn:
+      farbe: cyan
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.sheep.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWM2OGUzMDcwZWM3OTY5NGEwNDNjZDllYzM4NGNhY2U2NzdlMmRlNjJjNDMyNjNiNjUyNDM1Y2Q0NjZlYjNmIn19fQ=="}]},minecraft:item_name="Cyan Sheep Head"]
+  - wenn:
+      farbe: purple
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.sheep.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTQ1ZmUxMGVjNDYyNzU3NTM3MzVlZTBmM2Q1ODU3YmY5NWFjNWJlZDMwNTZiNDRiMmE3MjJlNmU4NGI2NmNlOSJ9fX0="}]},minecraft:item_name="Purple Sheep Head"]
+  - wenn:
+      farbe: blue
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.sheep.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmY0ZGUzNWRhNmEzZGEzOTU2ZjhlOGY5YzgzYmU3YTUzNTlmMTVkN2U0ZDc4M2VkY2Q5ZTBmZTkzYTQ5MGY5In19fQ=="}]},minecraft:item_name="Blue Sheep Head"]
+  - wenn:
+      farbe: brown
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.sheep.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTBiMGVkMTM4MmVlZGQ1ODE0NTQ5YzgyOTkyNDVkOTE3NjY4YWFiMzgwODZhZWRlYjlmZGI2ZjNjYTdkMzM3MiJ9fX0="}]},minecraft:item_name="Brown Sheep Head"]
+  - wenn:
+      farbe: green
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.sheep.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThjOWNmNjA1ZWZkMDdkMzgzMzJhZWZkYmE0NWJkZDlmZTA0YjQ3MDI5MTBiMGEzMDc0NmM2ZmM5YTIxOTYwNCJ9fX0="}]},minecraft:item_name="Green Sheep Head"]
+  - wenn:
+      farbe: red
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.evoker.prepare_wololo",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWJhOGU2Yzk4OTgxODFmMDE2MGQwZjUwZmZhOTU0ZTZkNWNiMjc5NTFkNjZlNjEwYmE3MmM4Y2ExMmViYmE5NCJ9fX0="}]},minecraft:item_name="Red Sheep Head"]
+  - wenn:
+      farbe: black
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.sheep.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzNiNzliN2M4MmU1MGNiZWNkNzI3NjQ1NzVhNWVkYjkzODY1YTQxMmM0YzAwZGY1NDQ1ZWEzY2E5ZWY5YTA5YSJ9fX0="}]},minecraft:item_name="Black Sheep Head"]
+shulker:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.shulker.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmI5ZTZhZjZiODE5ZjNkOTBlNjdjZTJlNzA1OWZiZWYzMWRhMmFhOTUzZDM1ZTM0NTRmMTAyMWZhOTEyZWZkZSJ9fX0="}]},minecraft:item_name="Shulker Head"]
+silverfish:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.silverfish.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjI1ZTlmYWUzNzE2NjRkZTFhODAwYzg0ZDAyNTEyNGFiYjhmMTUxMTE4MDdjOGJjMWFiOTEyNmFhY2JkNGY5NSJ9fX0="}]},minecraft:item_name="Silverfish Head"]
+skeleton_horse:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.skeleton_horse.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmUyMjY3MDViZDJhOWU3YmI4ZDZiMGY0ZGFhOTY5YjllMTJkNGFlNWM2NmRhNjkzYmI1ZjRhNGExZTZhYTI5NiJ9fX0="}]},minecraft:item_name="Skeleton Horse Head"]
+slime:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.slime.squish_small",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzA2NDI0ZWM3YTE5NmIxNWY5YWQ1NzMzYTM2YTZkMWYyZTZhMGQ0MmZmY2UxZTE1MDhmOTBmMzEyYWM0Y2FlZCJ9fX0="}]},minecraft:item_name="Slime Head"]
+sniffer:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.sniffer.scenting",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzg0YTdlN2ZlMTk3YjdlNzQxOWI1MWQ0NmNjMjMzNTUxYjllYzg5OWRlMWFmZTdmNjUzZTRmOGZiMjZhNjg2ZSJ9fX0="}]},minecraft:item_name="Sniffer Head"]
+snow_golem:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.snow_golem.hurt",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2FhM2UxN2VmMWIyOWE0Yjg3ZmE0M2RlZTFkYjEyYzQxZmQzOWFhMzg3ZmExM2FmMmEwNzliNWIzNzhmZGU4YiJ9fX0="}]},minecraft:item_name="Snow Golem Head"]
+spider:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.spider.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGUyOGU2NjI5YjZlZDFkYTk0ZDRhODE4NzYxNjEyYzM2ZmIzYTY4MTNjNGI2M2ZiOWZlYTUwNzY0MTVmM2YwYyJ9fX0="}]},minecraft:item_name="Spider Head"]
+squid:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.squid.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODM1MWI3ZDlhNGYzNmNmZTMxZmQ1OWQ4YzkwMGU0MTlhMTM1MTQ0MTA1ZTdhOTgxY2FhNWExNjhkY2ZmMzI1YiJ9fX0="}]},minecraft:item_name="Squid Head"]
+stray:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.stray.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTkyYjU1OTcwODVlMzVkYjUzZDliZGEwMDhjYWU3MmIyZjAwY2Q3ZDRjZDhkYzY5ZmYxNzRhNTViNjg5ZTZlIn19fQ=="}]},minecraft:item_name="Stray Head"]
+strider:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.strider.happy",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWM0MGZhZDFjMTFkZTllNjQyMmI0MDU0MjZlOWI5NzkwN2YzNWJjZTM0NWUzNzU4NjA0ZDNlN2JlN2RmODg0In19fQ=="}]},minecraft:item_name="Strider Head"]
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.strider.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcxMzA4NWE1NzUyN2U0NTQ1OWMzOGZhYTdiYjkxY2FiYjM4MWRmMzFjZjJiZjc5ZDY3YTA3MTU2YjZjMjMwOSJ9fX0="}]},minecraft:item_name="Cold Strider Head"]
+tadpole:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.tadpole.flop",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2RhZjE2NTNiNWY1OWI1ZWM1YTNmNzk2MDljYjQyMzM1NzlmZWYwN2U2OTNiNjE3NDllMDkwMDE0OWVkZjU2MyJ9fX0="}]},minecraft:item_name="Tadpole Head"]
+trader_llama:
+  varianten:
+  - wenn:
+      variante: creamy
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.llama.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTg5YTJlYjE3NzA1ZmU3MTU0YWIwNDFlNWM3NmEwOGQ0MTU0NmEzMWJhMjBlYTMwNjBlM2VjOGVkYzEwNDEyYyJ9fX0="}]},minecraft:item_name="Creamy Trader Llama Head"]
+  - wenn:
+      variante: white
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.llama.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzA4N2E1NTZkNGZmYTk1ZWNkMjg0NGYzNTBkYzQzZTI1NGU1ZDUzNWZhNTk2ZjU0MGQ3ZTc3ZmE2N2RmNDY5NiJ9fX0="}]},minecraft:item_name="White Trader Llama Head"]
+  - wenn:
+      variante: brown
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.llama.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQyNDc4MGIzYzVjNTM1MWNmNDlmYjViZjQxZmNiMjg5NDkxZGY2YzQzMDY4M2M4NGQ3ODQ2MTg4ZGI0Zjg0ZCJ9fX0="}]},minecraft:item_name="Brown Trader Llama Head"]
+  - wenn:
+      variante: gray
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.llama.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmU0ZDhhMGJjMTVmMjM5OTIxZWZkOGJlMzQ4MGJhNzdhOThlZTdkOWNlMDA3MjhjMGQ3MzNmMGEyZDYxNGQxNiJ9fX0="}]},minecraft:item_name="Gray Trader Llama Head"]
+tropical_fish:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.tropical_fish.flop",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzRhMGM4NGRjM2MwOTBkZjdiYWZjNDM2N2E5ZmM2Yzg1MjBkYTJmNzNlZmZmYjgwZTkzNGQxMTg5ZWFkYWM0MSJ9fX0="}]},minecraft:item_name="Tropical Fish Head"]
+turtle:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.turtle.ambient_land",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzA0OTMxMjAwYWQ0NjBiNjUwYTE5MGU4ZDQxMjI3YzM5OTlmYmViOTMzYjUxY2E0OWZkOWU1OTIwZDFmOGU3ZCJ9fX0="}]},minecraft:item_name="Turtle Head"]
+vex:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.vex.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjk1MzhmMjgzMGM0ZGVhNjk5NmVkNzQ0Nzg1NTA0ZTMyZTBlMjBkODY2M2VkYWI2YjAyMjJmMmMwMjIwNzdiZCJ9fX0="}]},minecraft:item_name="Vex Head"]
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.vex.charge",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGE0ZTUxOGUxNmU0YjVjMTE0YWNiZDljNjFjZDE4MjkyZGE5ZWY2MDU1MGE0ZmNhZTI3ZDM5YWUyOTNlNDc3YSJ9fX0="}]},minecraft:item_name="Vex Head"]
+villager:
+  varianten:
+  - wenn:
+      beruf: armorer
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWVmNjI3ZjU2NmFjMGE3ODI4YmFkOTNlOWU0Yjk2NDNkOTlhOTI4YTEzZDVmOTc3YmY0NDFlNDBkYjEzMzZiZiJ9fX0="}]},minecraft:item_name="Armorer Villager Head"]
+  - wenn:
+      beruf: butcher
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTFiYWQ2NDE4NWUwNGJmMWRhZmUzZGE4NDkzM2QwMjU0NWVhNGE2MzIyMWExMGQwZjA3NzU5MTc5MTEyYmRjMiJ9fX0="}]},minecraft:item_name="Butcher Villager Head"]
+  - wenn:
+      beruf: cartographer
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTNhZWNmYmU4MDFjZjMyYjVkMWIwYjFmNjY4MDA0OTY2NjE1ODY3OGM1M2Y0YTY1MWZjODNlMGRmOWQzNzM4YiJ9fX0="}]},minecraft:item_name="Cartographer Villager Head"]
+  - wenn:
+      beruf: cleric
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWI5ZTU4MmUyZjliODlkNTU2ZTc5YzQ2OTdmNzA2YjFkZDQ5MjllY2FlM2MwN2VlOTBiZjFkNWJlMzE5YmY2ZiJ9fX0="}]},minecraft:item_name="Cleric Villager Head"]
+  - wenn:
+      beruf: farmer
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDkyNzJkMDNjZGE2MjkwZTRkOTI1YTdlODUwYTc0NWU3MTFmZTU3NjBmNmYwNmY5M2Q5MmI4ZjhjNzM5ZGIwNyJ9fX0="}]},minecraft:item_name="Farmer Villager Head"]
+  - wenn:
+      beruf: fisherman
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDE4OWZiNGFjZDE1ZDczZmYyYTU4YTg4ZGYwNDY2YWQ5ZjRjMTU0YTIwMDhlNWM2MjY1ZDVjMmYwN2QzOTM3NiJ9fX0="}]},minecraft:item_name="Fisherman Villager Head"]
+  - wenn:
+      beruf: fletcher
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmY2MTFmMTJlMThjZTQ0YTU3MjM4ZWVmMWNhZTAzY2Q5ZjczMGE3YTQ1ZTBlYzI0OGYxNGNlODRlOWM0ODA1NiJ9fX0="}]},minecraft:item_name="Fletcher Villager Head"]
+  - wenn:
+      beruf: leatherworker
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWUwZTk1OTFlMTFhYWVmNGMyYzUxZDlhYzY5NTE0ZTM0MDQ4NWRlZmNjMmMxMmMzOGNkMTIzODZjMmVjNmI3OCJ9fX0="}]},minecraft:item_name="Leatherworker Villager Head"]
+  - wenn:
+      beruf: librarian
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2RjYWE1NzRiYWJiNDBlZTBmYTgzZjJmZDVlYTIwY2ZmMzFmZmEyNzJmZTExMzU4OGNlZWU0Njk2ODIxMjhlNyJ9fX0="}]},minecraft:item_name="Librarian Villager Head"]
+  - wenn:
+      beruf: mason
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWUwZTk1OTFlMTFhYWVmNGMyYzUxZDlhYzY5NTE0ZTM0MDQ4NWRlZmNjMmMxMmMzOGNkMTIzODZjMmVjNmI3OCJ9fX0="}]},minecraft:item_name="Mason Villager Head"]
+  - wenn:
+      beruf: nitwit
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWUwZTk1OTFlMTFhYWVmNGMyYzUxZDlhYzY5NTE0ZTM0MDQ4NWRlZmNjMmMxMmMzOGNkMTIzODZjMmVjNmI3OCJ9fX0="}]},minecraft:item_name="Nitwit Villager Head"]
+  - wenn:
+      beruf: none
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWUwZTk1OTFlMTFhYWVmNGMyYzUxZDlhYzY5NTE0ZTM0MDQ4NWRlZmNjMmMxMmMzOGNkMTIzODZjMmVjNmI3OCJ9fX0="}]},minecraft:item_name="Villager Head"]
+  - wenn:
+      beruf: shepherd
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmFiZjRlOTE1NGFjOTI3MTk0MWM3MzNlYWNjNjJkYzlmYzBhNmRjMWI1ZDY3Yzc4Y2E5OGFmYjVjYjFiZTliMiJ9fX0="}]},minecraft:item_name="Shepherd Villager Head"]
+  - wenn:
+      beruf: toolsmith
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYWUwZTk1OTFlMTFhYWVmNGMyYzUxZDlhYzY5NTE0ZTM0MDQ4NWRlZmNjMmMxMmMzOGNkMTIzODZjMmVjNmI3OCJ9fX0="}]},minecraft:item_name="Toolsmith Villager Head"]
+  - wenn:
+      beruf: weaponsmith
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODQ3NmZmYTQxMGJiZTdmYTcwOTA5OTY1YTEyNWY0YTRlOWE0ZmIxY2UxYjhiM2MzNGJmYjczYWFmZmQ0Y2U0MyJ9fX0="}]},minecraft:item_name="Weaponsmith Villager Head"]
+vindicator:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.vindicator.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmRhYmFmZGUyN2VlMTJiMDk4NjUwNDdhZmY2ZjE4M2ZkYjY0ZTA0ZGFlMWMwMGNjYmRlMDRhZDkzZGNjNmM5NSJ9fX0="}]},minecraft:item_name="Vindicator Head"]
+wandering_trader:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wandering_trader.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWYxMzc5YTgyMjkwZDdhYmUxZWZhYWJiYzcwNzEwZmYyZWMwMmRkMzRhZGUzODZiYzAwYzkzMGM0NjFjZjkzMiJ9fX0="}]},minecraft:item_name="Wandering Trader Head"]
+warden:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.warden.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjJmMzg3OWI3MzcxMjc0ODVlYjM1ZGRlZTc0OGQwNmNmOTE0YjE5M2Q5Nzc1M2FlMzRlOTIyMzA4NDI4MzFmYiJ9fX0="}]},minecraft:item_name="Warden Head"]
+witch:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.witch.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTUyMGYxMmM2M2M3OTEyMTg2YzRiZTRlMzBjMzNjNWFjYWVjMGRiMGI2YWJkODM2ZDUxN2Q3NGE2MjI3NWQ0YiJ9fX0="}]},minecraft:item_name="Witch Head"]
+wither:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wither.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWRhMTA4MjhmNjNiN2VjZGVmZDc2N2IzMjQ1ZmJkYWExM2MzZWMwYzZiMTM3NzRmMWVlOGQzMDdjMDM0YzM4MyJ9fX0="}]},minecraft:item_name="Wither Head"]
+  zusatz:
+    chance: 0.5
+    zufaellig-einer-von:
+    - minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wither.shoot",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjM3YzU4MTRhOTJmOGVjMGY2YWU5OTMzYWJlOTU0MmUxNjUxOTA3NjhlNzYwNDc4NTQzYWViZWVkNDAyN2MyNyJ9fX0="}]},minecraft:item_name="Wither Projectile Head"]
+    - minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wither.shoot",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDM2ODJiMDYyMDNiOWRlNGMyODU0MTA3MWEyNmNkYzM0MGRkMjVkNGMzNzJiNzAyM2VjMmY0MTIwMjFkNjJmNyJ9fX0="}]},minecraft:item_name="Blue Wither Projectile Head"]
+wolf:
+  varianten:
+  - wenn:
+      variante: ashen
+      wuetend: false
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wolf.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzIzODRjNWNmMTg5NDhiODNhODk1NDhkYmE1YTk5NDVlZGVlZmM1ZTk2NTRjNWQ2ZDM4YWUxMGE1ZDUwMmU3NSJ9fX0="}]},minecraft:item_name="Ashen Wolf Head"]
+  - wenn:
+      variante: ashen
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wolf.growl",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2NiYzMwNjZkMzFjNDM5MDM1MDM4ZmQ2ODc1ZDVkYmVlYzM5NjhjMWI4MDA2ZmZiZmI1ZjY3NGQ3NmM4OWNkZSJ9fX0="}]},minecraft:item_name="Angry Ashen Wolf Head"]
+  - wenn:
+      variante: black
+      wuetend: false
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wolf.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzVhNjZhNDJiMjVmODIyYTdlMTZhMjE4NzUyOGQxYTJlMjk0YTAxZDlmODUwNjcxYjk0Yzk1NzQyYmI0OTE2ZSJ9fX0="}]},minecraft:item_name="Black Wolf Head"]
+  - wenn:
+      variante: black
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wolf.growl",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTVlZDQ3ZGVkMjcwOGIxM2Q5MmViNTBmYjY4ZThjMWUxMWIzOWEwY2Q0NWIzOTM3MmVlYWQ4NzJjNDllZWFlYiJ9fX0="}]},minecraft:item_name="Angry Black Wolf Head"]
+  - wenn:
+      variante: chestnut
+      wuetend: false
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wolf.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2I5YjBkNDg0NDIyMDRmZjZmZDM5ZmEwNzQxNjcxMThlOWMwNjZjZGUzODg4OTc3ZDBmNjAzNmUxZDhhNjllZSJ9fX0="}]},minecraft:item_name="Chestnut Wolf Head"]
+  - wenn:
+      variante: chestnut
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wolf.growl",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjg0YjI4ZjIzMmIxNGE1OWI2Y2I3NzU3MzIzOTc0ZWE1MDJiMWJjYjk4NGRlYTMwMDkzZWMyMWVkMmFkZTMxMiJ9fX0="}]},minecraft:item_name="Angry Chestnut Wolf Head"]
+  - wenn:
+      variante: pale
+      wuetend: false
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wolf.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWVlMzNjMmRjMDdkNzZiNGYwM2U2NjQyN2EwOGNiYTJlODE3OWQwNzVhZTY0YjljZTE1MGFhNDIwOWM1YWYzOSJ9fX0="}]},minecraft:item_name="Pale Wolf Head"]
+  - wenn:
+      variante: pale
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wolf.growl",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjg4N2E0Mjc4NzkwMGU2NzE2ZmE0NjJmYmFkOGRlYjU1MjZiOTQzOTg3OTc0MTRmMDNmNjAxM2VmODg1YTFkYiJ9fX0="}]},minecraft:item_name="Angry Pale Wolf Head"]
+  - wenn:
+      variante: rusty
+      wuetend: false
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wolf.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjM0NTVmNjA0OGE2ODA5OGNkMjc2MzRlMzE0NmM4MWM4MjY5YWVlZmNmMGFmZjkxY2M5NzZlZmEwYmFhMTE0NiJ9fX0="}]},minecraft:item_name="Rusty Wolf Head"]
+  - wenn:
+      variante: rusty
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wolf.growl",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDFmMWMzMmU1MjU4ZjNkOGY4ZDE4MWZiMzBkZjYxZTA2OTNlNTVkNTM4YTEzZWVhYmRmNjMwMGYzODA4M2FkYyJ9fX0="}]},minecraft:item_name="Angry Rusty Wolf Head"]
+  - wenn:
+      variante: snowy
+      wuetend: false
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wolf.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGVjYWRhYjUwYWE4ZDQxZmE5YjM2OWEyZjg0Zjk3NDU2YmU3OTAwYjIyMGVjZTNiOTVlOGEwMDk2ODY2MGQ1In19fQ=="}]},minecraft:item_name="Snowy Wolf Head"]
+  - wenn:
+      variante: snowy
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wolf.growl",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTJiN2MyODZjMjMwODI2YjI5ZTdmZDM3ZjI1NzNiOTAxNWM0MjJiYzM4ZmViMTRkOWEzMTdjNjg1NWFkYTNmNiJ9fX0="}]},minecraft:item_name="Angry Snowy Wolf Head"]
+  - wenn:
+      variante: spotted
+      wuetend: false
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wolf.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTczYjlhNjQzMWFmMjZiY2IzMTgyNmViNmZkOWY0YjM1Yjk0N2JhNTg4MmM2ZTRhYTkzNTg4NjMzZjdiOGQ5ZCJ9fX0="}]},minecraft:item_name="Spotted Wolf Head"]
+  - wenn:
+      variante: spotted
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wolf.growl",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTc4NmI3MzkzNDhhYTg1MDJlYTE4NWRmYjE0YmY1YWIwMWUyOWUwODJkMWZlYjg2MTNiM2ZlOTNlMGRlYmQ4ZSJ9fX0="}]},minecraft:item_name="Angry Spotted Wolf Head"]
+  - wenn:
+      variante: striped
+      wuetend: false
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wolf.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2ZjNTJmYjNjZGZjNmFlYjAwZTY3YzFiN2E1OWQ4ZDMyMGRmNDQ2NTZjN2FmNjgyNGIxM2NhNjA3OTJhYTdkNyJ9fX0="}]},minecraft:item_name="Striped Wolf Head"]
+  - wenn:
+      variante: striped
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wolf.growl",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGQ2MGMyNTQ4OGIwNjcyNzY2OWE2OTE1ZDFkYWRhYTlhN2QyODMxYjQ2MGJlZTMwZTVkYTQwNzg3NDcwNTAwMSJ9fX0="}]},minecraft:item_name="Angry Striped Wolf Head"]
+  - wenn:
+      variante: woods
+      wuetend: false
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wolf.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGQxMmFiMTc2NDdiNjljOTQyMTc2OTU3MmFjNjc0ZGUxOTkxMjRjMjg0YjllZDFmNjVhMjg1YzM4Y2QyYTUwNCJ9fX0="}]},minecraft:item_name="Woods Wolf Head"]
+  - wenn:
+      variante: woods
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wolf.growl",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTMwNTgzZGJhOGVhNjE0MzA1ZGIwMTBiYWJkYzViYjQ0ZTlhMjAwMzMxMWIzOTlkODk2NWU3NzJkZDAxOTFmYiJ9fX0="}]},minecraft:item_name="Angry Woods Wolf Head"]
+  - wenn:
+      wuetend: false
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wolf.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWVlMzNjMmRjMDdkNzZiNGYwM2U2NjQyN2EwOGNiYTJlODE3OWQwNzVhZTY0YjljZTE1MGFhNDIwOWM1YWYzOSJ9fX0="}]},minecraft:item_name="Pale Wolf Head"]
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.wolf.growl",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjg4N2E0Mjc4NzkwMGU2NzE2ZmE0NjJmYmFkOGRlYjU1MjZiOTQzOTg3OTc0MTRmMDNmNjAxM2VmODg1YTFkYiJ9fX0="}]},minecraft:item_name="Angry Pale Wolf Head"]
+zoglin:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.zoglin.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmUzNDkzYTk1NmJmZDc1ODhlZDFhOGVhODU4NzU5NjY3NjU5ZDU4MTAwY2JlY2Q2ZDk2Y2NjMGNhOWIzNjkyMyJ9fX0="}]},minecraft:item_name="Zoglin Head"]
+zombie_horse:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.zombie_horse.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjYxOGZmYmUxY2ZhMjA1OGZlODBhMDY1ZjcwYzEyOGMyMjVhMWUwYmM5ZGVhZjhiMzhiMDM5NTQ0M2Y0MDkwOSJ9fX0="}]},minecraft:item_name="Zombie Horse Head"]
+zombie_nautilus:
+  varianten:
+  - wenn:
+      variante: warm
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.zombie_nautilus.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTUyYWMyYWNjNWU5Y2EyMzcyN2Y0NDg3OTI0MmIxMDRmZGQ2ZTA0NGY3ZmIyZDI5ZmVmY2E0YmMyZjRkNGMzIn19fQ=="}]},minecraft:item_name="Coral Zombie Nautilus Shell"]
+  - wenn:
+      variante: temperate
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.zombie_nautilus.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWI2ZDE2YmNiYzg1ODMyMGU0ZWVjYjgxOGFiZjI5YWY4MjViY2Y5MWZhYzc5ODlhYmE1NTM2YWI4YmE0MGMwZiJ9fX0="}]},minecraft:item_name="Temperate Zombie Nautilus Shell"]
+zombie_villager:
+  varianten:
+  - wenn:
+      beruf: armorer
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.zombie_villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzg2NzllMDM0NzY3ZDUxODY2MGQ5NDE2ZGM1ZWFmMzE5ZDY5NzY4MmFjNDBjODg2ZTNjMmJjOGRmYTFkZTFkIn19fQ=="}]},minecraft:item_name="Zombie Armorer Head"]
+  - wenn:
+      beruf: butcher
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.zombie_villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWNjZThkNmNlNDEyNGNlYzNlODRhODUyZTcwZjUwMjkzZjI0NGRkYzllZTg1NzhmN2Q2ZDg5MjllMTZiYWQ2OSJ9fX0="}]},minecraft:item_name="Zombie Butcher Head"]
+  - wenn:
+      beruf: cartographer
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.zombie_villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTYwODAwYjAxMDEyZTk2M2U3YzIwYzhiYTE0YjcwYTAyNjRkMTQ2YTg1MGRlZmZiY2E3YmZlNTEyZjRjYjIzZCJ9fX0="}]},minecraft:item_name="Zombie Cartographer Head"]
+  - wenn:
+      beruf: cleric
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.zombie_villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjk1ODU3OGJlMGUxMjE3MjczNGE3ODI0MmRhYjE0OTY0YWJjODVhYjliNTk2MzYxZjdjNWRhZjhmMTRhMGZlYiJ9fX0="}]},minecraft:item_name="Zombie Cleric Head"]
+  - wenn:
+      beruf: farmer
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.zombie_villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjc3ZDQxNWY5YmFhNGZhNGI1ZTA1OGY1YjgxYmY3ZjAwM2IwYTJjOTBhNDgzMWU1M2E3ZGJjMDk4NDFjNTUxMSJ9fX0="}]},minecraft:item_name="Zombie Farmer Head"]
+  - wenn:
+      beruf: fisherman
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.zombie_villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjkwNWQ1M2ZlNGZhZWIwYjMxNWE2ODc4YzlhYjgxYjRiZTUyYzMxY2Q0NzhjMDI3ZjBkN2VjZTlmNmRhODkxNCJ9fX0="}]},minecraft:item_name="Zombie Fisherman Head"]
+  - wenn:
+      beruf: fletcher
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.zombie_villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmVhMjZhYzBlMjU0OThhZGFkYTRlY2VhNThiYjRlNzZkYTMyZDVjYTJkZTMwN2VmZTVlNDIxOGZiN2M1ZWY4OSJ9fX0="}]},minecraft:item_name="Zombie Fletcher Head"]
+  - wenn:
+      beruf: leatherworker
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.zombie_villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmI1NTJjOTBmMjEyZTg1NWQxMjI1NWQ1Y2Q2MmVkMzhiOWNkN2UzMGU3M2YwZWE3NzlkMTc2NDMzMGU2OTI2NCJ9fX0="}]},minecraft:item_name="Zombie Leatherworker Head"]
+  - wenn:
+      beruf: librarian
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.zombie_villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjIyMTFhMWY0MDljY2E0MjQ5YzcwZDIwY2E4MDM5OWZhNDg0NGVhNDE3NDU4YmU5ODhjYzIxZWI0Nzk3Mzc1ZSJ9fX0="}]},minecraft:item_name="Zombie Librarian Head"]
+  - wenn:
+      beruf: mason
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.zombie_villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmI1NTJjOTBmMjEyZTg1NWQxMjI1NWQ1Y2Q2MmVkMzhiOWNkN2UzMGU3M2YwZWE3NzlkMTc2NDMzMGU2OTI2NCJ9fX0="}]},minecraft:item_name="Zombie Mason Head"]
+  - wenn:
+      beruf: nitwit
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.zombie_villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmI1NTJjOTBmMjEyZTg1NWQxMjI1NWQ1Y2Q2MmVkMzhiOWNkN2UzMGU3M2YwZWE3NzlkMTc2NDMzMGU2OTI2NCJ9fX0="}]},minecraft:item_name="Zombie Nitwit Head"]
+  - wenn:
+      beruf: none
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.zombie_villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmI1NTJjOTBmMjEyZTg1NWQxMjI1NWQ1Y2Q2MmVkMzhiOWNkN2UzMGU3M2YwZWE3NzlkMTc2NDMzMGU2OTI2NCJ9fX0="}]},minecraft:item_name="Zombie Villager Head"]
+  - wenn:
+      beruf: shepherd
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.zombie_villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjkxMzkxYmVmM2E0NmVmMjY3ZDNiNzE3MTA4NmJhNGM4ZDE3ZjJhNmIwZjgzZmEyYWMzMGVmZTkxNGI3YzI0OSJ9fX0="}]},minecraft:item_name="Zombie Shepherd Head"]
+  - wenn:
+      beruf: toolsmith
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.zombie_villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmI1NTJjOTBmMjEyZTg1NWQxMjI1NWQ1Y2Q2MmVkMzhiOWNkN2UzMGU3M2YwZWE3NzlkMTc2NDMzMGU2OTI2NCJ9fX0="}]},minecraft:item_name="Zombie Toolsmith Head"]
+  - wenn:
+      beruf: weaponsmith
+    item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.zombie_villager.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDM3MDg5NGI1Y2MzMDVkODdhYTA4YzNiNGIwODU4N2RiNjhmZjI5ZTdhM2VmMzU0Y2FkNmFiY2E1MGU1NTI4YiJ9fX0="}]},minecraft:item_name="Zombie Weaponsmith Head"]
+zombified_piglin:
+  varianten:
+  - item: minecraft:player_head[minecraft:note_block_sound="minecraft:entity.zombified_piglin.ambient",minecraft:profile={"properties":[{"name":"textures","value":"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmRmMDMxMjhiMDAyYTcwNzA4ZDY4MjVlZDZjZjU0ZGRmNjk0YjM3NjZkNzhkNTY0OTAzMGIxY2I4YjM0YzZmYSJ9fX0="}]},minecraft:item_name="Zombified Piglin Head"]
