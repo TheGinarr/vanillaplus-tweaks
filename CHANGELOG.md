@@ -1,5 +1,9 @@
 # Änderungen
 
+## 3.0.2
+
+- **Neu: `/afk`** für alle Spieler (Recht `vptweaks.afk`, standardmäßig erlaubt). Markiert sofort als AFK, zusätzlich zur automatischen Erkennung. Nochmal `/afk` oder Bewegen beendet es. Im Chat erscheint „… ist jetzt AFK“ bzw. „… ist wieder da“ (abschaltbar mit `afk.command-announce`).
+
 ## 3.0.1
 
 - **AFK-Anzeige:** Wer AFK ist, steht im Tab jetzt mit durchgestrichenem Namen und dem Zusatz „AFK“. Das Aussehen lässt sich mit `afk.tab-name` einstellen. Alte AFK-Teams (vom Datapack „AFK Display“ und älteren Versionen) werden beim Start entfernt, damit niemand grau „hängen bleibt“.

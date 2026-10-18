@@ -71,12 +71,16 @@ cpu-placeholder:
 # --------------------------------------------------------------------
 
 # "AFK Display": Wer so viele Sekunden nicht von der Stelle kommt, wird im Tab markiert.
+# Zusaetzlich kann sich jeder mit /afk sofort selbst als AFK melden (nochmal /afk oder bewegen: zurueck).
 # tab-name: so steht der Spieler dann im Tab (MiniMessage-Format, <name> = Spielername).
 #           Standard: durchgestrichener Name und dahinter grau "AFK".
+# command-announce: bei /afk im Chat melden "… ist jetzt AFK" bzw. "… ist wieder da".
+#           Die automatische Erkennung nach "seconds" meldet nichts im Chat.
 afk:
   enabled: true
   seconds: 150
   tab-name: "<st><name></st> <gray>AFK</gray>"
+  command-announce: true
 
 # "Multiplayer Sleep": Chat-Meldung, wer schlafen geht und ob die Nacht uebersprungen wird
 # (z. B. "Steve geht schlafen – die Nacht wird übersprungen" oder "... – noch 1 Spieler muss schlafen").

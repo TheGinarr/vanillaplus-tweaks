@@ -81,6 +81,7 @@ public final class VanillaPlusTweaks extends JavaPlugin {
         registriereRecht("vptweaks.admin", "Befehl /vptweaks", PermissionDefault.OP);
         registriereRecht("vptweaks.elytra.bypass", "Keine Abklingzeit fuer Elytra-Raketen", PermissionDefault.FALSE);
         registriereRecht("vptweaks.dimension.bypass", "Gesperrte Nether-/End-Portale benutzen", PermissionDefault.FALSE);
+        registriereRecht("vptweaks.afk", "Befehl /afk", PermissionDefault.TRUE);
 
         Zeitzone.anwenden(getConfig(), getLogger());
     }

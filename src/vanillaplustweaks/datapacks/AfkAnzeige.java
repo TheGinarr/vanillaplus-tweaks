@@ -3,8 +3,11 @@ package vanillaplustweaks.datapacks;
 import vanillaplustweaks.Modul;
 import vanillaplustweaks.VanillaPlusTweaks;
 import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import net.kyori.adventure.text.minimessage.tag.resolver.Placeholder;
+import io.papermc.paper.command.brigadier.BasicCommand;
+import io.papermc.paper.command.brigadier.CommandSourceStack;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -30,6 +33,9 @@ import java.util.UUID;
  * Die Markierung ist nur der Tab-Name des Spielers. Sie wird nirgends gespeichert und ist
  * nach einem Neustart oder Neu-Einloggen automatisch weg.
  *
+ * Zusaetzlich kann sich jeder Spieler mit /afk sofort selbst als AFK markieren (und mit /afk
+ * wieder zurueckmelden). Auch dann endet die Markierung, sobald er sich bewegt.
+ *
  * Unterschied zum Datapack: Es wird nur alle 5 Sekunden geprueft statt mit einer Befehlsschleife,
  * und es gibt kein Team mehr, in dem man "haengen bleiben" kann.
  */
@@ -46,10 +52,14 @@ public final class AfkAnzeige extends Modul implements Listener {
 
     private long afkNachMillis;
     private String anzeige;
+    private boolean befehlMelden;
 
     private final Map<UUID, Location> letztePosition = new HashMap<>();
     private final Map<UUID, Long> letzteBewegung = new HashMap<>();
     private final Set<UUID> afk = new HashSet<>();
+
+    /** Wer sich selbst mit /afk gemeldet hat – nur fuer diese gibt es "ist wieder da". */
+    private final Set<UUID> perBefehl = new HashSet<>();
 
 
     public AfkAnzeige(VanillaPlusTweaks plugin) {
@@ -67,10 +77,75 @@ public final class AfkAnzeige extends Modul implements Listener {
     public void start() {
         afkNachMillis = zahl("seconds", 150) * 1000L;
         anzeige = text("tab-name", "<st><name></st> <gray>AFK</gray>");
+        befehlMelden = schalter("command-announce", true);
 
         alteTeamsEntfernen();
         registriereListener(this);
+        registriereBefehl();
         wiederholeAlle(100, this::pruefen);
+    }
+
+
+    // ------------------------------------------------------------------
+    // Befehl /afk
+    // ------------------------------------------------------------------
+
+    private void registriereBefehl() {
+        plugin.registerCommand("afk", "Markiert dich als AFK (nochmal /afk: zurueck)", new BasicCommand() {
+
+            @Override
+            public void execute(CommandSourceStack quelle, String[] argumente) {
+                if (quelle.getSender() instanceof Player spieler) {
+                    umschalten(spieler);
+                } else {
+                    quelle.getSender().sendMessage("Nur fuer Spieler.");
+                }
+            }
+
+            @Override
+            public String permission() {
+                return "vptweaks.afk";
+            }
+        });
+    }
+
+
+    private void umschalten(Player spieler) {
+        UUID id = spieler.getUniqueId();
+
+        if (afk.contains(id)) {
+            zurueck(spieler);
+            return;
+        }
+
+        // Ab jetzt zaehlt nur Bewegung NACH dem Befehl
+        letztePosition.put(id, spieler.getLocation());
+        perBefehl.add(id);
+        markieren(spieler);
+        if (befehlMelden) {
+            plugin.getServer().broadcast(Component.text(spieler.getName() + " ist jetzt AFK.", NamedTextColor.GRAY));
+        }
+    }
+
+
+    private void markieren(Player spieler) {
+        if (afk.add(spieler.getUniqueId())) {
+            spieler.playerListName(afkName(spieler));
+        }
+    }
+
+
+    private void zurueck(Player spieler) {
+        UUID id = spieler.getUniqueId();
+        letzteBewegung.put(id, System.currentTimeMillis());
+
+        if (afk.remove(id)) {
+            spieler.playerListName(null); // zurueck zum normalen Namen
+            if (befehlMelden && perBefehl.remove(id)) {
+                plugin.getServer().broadcast(Component.text(spieler.getName() + " ist wieder da.", NamedTextColor.GRAY));
+            }
+        }
+        perBefehl.remove(id);
     }
 
 
@@ -83,16 +158,13 @@ public final class AfkAnzeige extends Modul implements Listener {
             Location vorher = letztePosition.put(id, hier);
 
             if (hatSichBewegt(vorher, hier)) {
-                letzteBewegung.put(id, jetzt);
-                if (afk.remove(id)) {
-                    spieler.playerListName(null); // zurueck zum normalen Namen
-                }
+                zurueck(spieler);
                 continue;
             }
 
             long stillSeit = jetzt - letzteBewegung.getOrDefault(id, jetzt);
-            if (stillSeit >= afkNachMillis && afk.add(id)) {
-                spieler.playerListName(afkName(spieler));
+            if (stillSeit >= afkNachMillis) {
+                markieren(spieler);
             }
         }
     }
@@ -104,6 +176,7 @@ public final class AfkAnzeige extends Modul implements Listener {
         letztePosition.remove(id);
         letzteBewegung.remove(id);
         afk.remove(id);
+        perBefehl.remove(id);
     }
 
 

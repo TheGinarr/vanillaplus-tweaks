@@ -1,12 +1,12 @@
 # VanillaPlusTweaks
 
-![Paper 26.3](https://img.shields.io/badge/Paper-26.3-blue) ![Java 25](https://img.shields.io/badge/Java-25-orange) ![Version 3.0.1](https://img.shields.io/badge/Version-3.0.1-brightgreen)
+![Paper 26.3](https://img.shields.io/badge/Paper-26.3-blue) ![Java 25](https://img.shields.io/badge/Java-25-orange) ![Version 3.0.2](https://img.shields.io/badge/Version-3.0.2-brightgreen)
 
 Paper-Plugin für **Minecraft 26.3**, das beliebte „Vanilla+“-Datapacks in einem Plugin vereint. Statt jeden Tick Befehle auszuführen, reagiert es nur auf Ereignisse im Spiel und spart so Rechenzeit. Jede Funktion ist ein eigenes Modul und lässt sich in der `config.yml` einzeln einstellen oder abschalten.
 
 ## Download
 
-**[VanillaPlusTweaks-3.0.1.jar](download/VanillaPlusTweaks-3.0.1.jar)** (auf der Seite rechts oben auf „Download raw file“ klicken)
+**[VanillaPlusTweaks-3.0.2.jar](download/VanillaPlusTweaks-3.0.2.jar)** (auf der Seite rechts oben auf „Download raw file“ klicken)
 
 ## Voraussetzungen
 
@@ -19,7 +19,7 @@ Paper-Plugin für **Minecraft 26.3**, das beliebte „Vanilla+“-Datapacks in e
 
 ## Installation
 
-1. `VanillaPlusTweaks-3.0.1.jar` in den Ordner `plugins` des Servers legen.
+1. `VanillaPlusTweaks-3.0.2.jar` in den Ordner `plugins` des Servers legen.
 2. Den Server starten. Dabei entsteht `plugins/VanillaPlusTweaks/config.yml`.
 3. Die Einstellungen nach Bedarf anpassen und den Server neu starten.
 
@@ -39,6 +39,7 @@ Im Auslieferungszustand sind alle Module aktiv, Nether und End sind offen und di
 
 | Befehl | Recht | Wirkung |
 |---|---|---|
+| `/afk` | `vptweaks.afk` (alle) | sich selbst sofort als AFK melden, nochmal `/afk` oder bewegen: zurück |
 | `/vptweaks status` | `vptweaks.admin` (OP) | aktive Module und Freischalt-Termine anzeigen |
 | `/vptweaks reload` | `vptweaks.admin` (OP) | Termine, Elytra-Abklingzeit und Weltgrenze neu laden |
 | `/vptweaks boote` | `vptweaks.admin` (OP) | leere Boote sofort entfernen |
