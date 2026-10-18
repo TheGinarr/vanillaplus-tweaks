@@ -1,5 +1,6 @@
 package vanillaplustweaks;
 
+import vanillaplustweaks.allgemein.Befehlssperre;
 import vanillaplustweaks.allgemein.CpuMessung;
 import vanillaplustweaks.bauen.BloeckeDrehen;
 import vanillaplustweaks.bauen.Doppeltueren;
@@ -82,6 +83,7 @@ public final class VanillaPlusTweaks extends JavaPlugin {
         registriereRecht("vptweaks.elytra.bypass", "Keine Abklingzeit fuer Elytra-Raketen", PermissionDefault.FALSE);
         registriereRecht("vptweaks.dimension.bypass", "Gesperrte Nether-/End-Portale benutzen", PermissionDefault.FALSE);
         registriereRecht("vptweaks.afk", "Befehl /afk", PermissionDefault.TRUE);
+        registriereRecht("vptweaks.commands.bypass", "Befehlssperre gilt nicht", PermissionDefault.OP);
 
         Zeitzone.anwenden(getConfig(), getLogger());
     }
@@ -99,6 +101,7 @@ public final class VanillaPlusTweaks extends JavaPlugin {
                 dimensionsSperre,
                 new ElytraBoostAbklingzeit(this),
                 new Weltgrenze(this),
+                new Befehlssperre(this),
 
                 // Ersatz fuer Datapacks
                 new AfkAnzeige(this),

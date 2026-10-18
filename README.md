@@ -1,12 +1,12 @@
 # VanillaPlusTweaks
 
-![Paper 26.3](https://img.shields.io/badge/Paper-26.3-blue) ![Java 25](https://img.shields.io/badge/Java-25-orange) ![Version 3.0.2](https://img.shields.io/badge/Version-3.0.2-brightgreen)
+![Paper 26.3](https://img.shields.io/badge/Paper-26.3-blue) ![Java 25](https://img.shields.io/badge/Java-25-orange) ![Version 3.1.0](https://img.shields.io/badge/Version-3.1.0-brightgreen)
 
 Paper-Plugin für **Minecraft 26.3**, das beliebte „Vanilla+“-Datapacks in einem Plugin vereint. Statt jeden Tick Befehle auszuführen, reagiert es nur auf Ereignisse im Spiel und spart so Rechenzeit. Jede Funktion ist ein eigenes Modul und lässt sich in der `config.yml` einzeln einstellen oder abschalten.
 
 ## Download
 
-**[VanillaPlusTweaks-3.0.2.jar](download/VanillaPlusTweaks-3.0.2.jar)** (auf der Seite rechts oben auf „Download raw file“ klicken)
+**[VanillaPlusTweaks-3.1.0.jar](download/VanillaPlusTweaks-3.1.0.jar)** (auf der Seite rechts oben auf „Download raw file“ klicken)
 
 ## Voraussetzungen
 
@@ -19,7 +19,7 @@ Paper-Plugin für **Minecraft 26.3**, das beliebte „Vanilla+“-Datapacks in e
 
 ## Installation
 
-1. `VanillaPlusTweaks-3.0.2.jar` in den Ordner `plugins` des Servers legen.
+1. `VanillaPlusTweaks-3.1.0.jar` in den Ordner `plugins` des Servers legen.
 2. Den Server starten. Dabei entsteht `plugins/VanillaPlusTweaks/config.yml`.
 3. Die Einstellungen nach Bedarf anpassen und den Server neu starten.
 
@@ -29,7 +29,7 @@ Im Auslieferungszustand sind alle Module aktiv, Nether und End sind offen und di
 
 | Bereich | Module |
 |---|---|
-| **Allgemein** | Zeitzone, Nether/End erst ab festem Termin, Abklingzeit für Elytra-Raketen, Weltgrenze je Dimension |
+| **Allgemein** | Zeitzone, Nether/End erst ab festem Termin, Abklingzeit für Elytra-Raketen, Weltgrenze je Dimension, Befehlssperre für Spieler ohne OP (standardmäßig aus) |
 | **Datapack-Ersatz** | AFK-Anzeige, Mehrspieler-Schlaf, schneller Laubzerfall, Beton und Schlamm im Wasserkessel, Tiere stumm schalten, alle Rezepte freischalten, leere Boote entfernen, XP in Flaschen, Netherportale in beliebiger Form, Sand von Wüstenzombies, gepanzerte Elytra, Steinsägen-Rezepte, klassische Angel-Schätze, knospender Amethyst mit Behutsamkeit, Tier- und Spielerköpfe |
 | **Farmen** | Rechtsklick-Ernte, Schutz vor Zertrampeln, Spender pflanzen, mehr Knochenmehl, Dorfbewohner folgen dem Smaragdblock |
 | **Bauen & Deko** | unsichtbare und gesperrte Rahmen, Rüstungsständer-Posen, Blöcke drehen, Doppeltüren, Dorfbewohner an der Leine |
@@ -45,6 +45,8 @@ Im Auslieferungszustand sind alle Module aktiv, Nether und End sind offen und di
 | `/vptweaks boote` | `vptweaks.admin` (OP) | leere Boote sofort entfernen |
 
 Weitere Rechte (standardmäßig niemand): `vptweaks.elytra.bypass` (keine Elytra-Abklingzeit), `vptweaks.dimension.bypass` (gesperrte Nether-/End-Portale benutzen).
+
+**Befehlssperre** (`command-block`, standardmäßig aus): Spieler ohne OP dürfen nur die Befehle, die in der `config.yml` auf `true` stehen (vorgegeben z. B. `/me`, `/msg`, `/list`, `/afk`). Gesperrte Befehle erscheinen auch nicht in der Tab-Vervollständigung, damit ist z. B. `/plugins` für normale Spieler unsichtbar. Ausgenommen: OPs und das Recht `vptweaks.commands.bypass`. Änderungen wirken mit `/vptweaks reload`.
 
 ## Platzhalter
 

@@ -1,5 +1,5 @@
 name: VanillaPlusTweaks
-version: '3.0.2'
+version: '3.1.0'
 main: vanillaplustweaks.VanillaPlusTweaks
 bootstrapper: vanillaplustweaks.TweaksBootstrap
 api-version: '26.3'

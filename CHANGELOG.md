@@ -1,5 +1,9 @@
 # Änderungen
 
+## 3.1.0
+
+- **Neu: Befehlssperre** (`command-block`, standardmäßig aus). Spieler ohne OP dürfen nur die Befehle, die in der `config.yml` je Befehl auf `true` stehen; alle anderen werden abgelehnt und aus der Tab-Vervollständigung entfernt. Befehle mit Namensraum (`/minecraft:msg`) zählen wie ohne. Ausnahme: OPs und Recht `vptweaks.commands.bypass`. Mit `/vptweaks reload` sofort wirksam.
+
 ## 3.0.2
 
 - **Neu: `/afk`** für alle Spieler (Recht `vptweaks.afk`, standardmäßig erlaubt). Markiert sofort als AFK, zusätzlich zur automatischen Erkennung. Nochmal `/afk` oder Bewegen beendet es. Im Chat erscheint „… ist jetzt AFK“ bzw. „… ist wieder da“ (abschaltbar mit `afk.command-announce`).

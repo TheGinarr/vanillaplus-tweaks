@@ -65,6 +65,34 @@ world-border:
 cpu-placeholder:
   enabled: true
 
+# Befehlssperre: Spieler ohne OP duerfen nur die Befehle, die hier auf true stehen.
+# Gesperrte Befehle tauchen fuer sie auch nicht in der Tab-Vervollstaendigung auf.
+# Befehle mit Namensraum (z. B. /minecraft:msg) zaehlen wie ohne (msg).
+# Nicht aufgefuehrte Befehle sind gesperrt. Aliase (tell, w ...) einzeln eintragen.
+# OPs und Spieler mit dem Recht "vptweaks.commands.bypass" sind nicht betroffen.
+# Mit "/vptweaks reload" sofort wirksam.
+command-block:
+  enabled: false
+  message: "<red>Unbekannter Befehl."   # MiniMessage-Format
+  commands:
+    me: true          # /me <Aktion>
+    msg: true         # private Nachricht
+    tell: true        # wie msg
+    w: true           # wie msg
+    teammsg: true     # Nachricht ans eigene Team
+    tm: true          # wie teammsg
+    list: true        # wer ist online
+    trigger: true     # fuer Datapacks mit Ausloesern
+    random: true      # Wuerfeln (/random roll)
+    afk: true         # VanillaPlusTweaks: sich AFK melden
+    help: false       # zeigt alle Befehle
+    plugins: false    # Plugin-Liste
+    pl: false         # wie plugins
+    version: false    # Server-/Plugin-Version
+    ver: false        # wie version
+    about: false      # wie version
+    icanhasbukkit: false  # wie version
+
 
 # --------------------------------------------------------------------
 #  ERSATZ FUER DIE FRUEHEREN DATAPACKS
