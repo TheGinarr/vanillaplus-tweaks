@@ -2,6 +2,7 @@ package vanillaplustweaks.datapacks;
 
 import vanillaplustweaks.Modul;
 import vanillaplustweaks.VanillaPlusTweaks;
+import org.bukkit.GameMode;
 import org.bukkit.GameRules;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
@@ -15,7 +16,8 @@ import org.bukkit.event.player.PlayerBedEnterEvent;
  *
  * Das Datapack baute auf der Minecraft-Spielregel "players_sleeping_percentage" auf.
  * Dieses Modul setzt dieselbe Spielregel (wenn gewuenscht) und schreibt in den Chat,
- * wer schlafen geht – z. B. "Steve geht schlafen (1/3)".
+ * wer schlafen geht und ob die Nacht uebersprungen wird, z. B.
+ * "Steve geht schlafen – die Nacht wird übersprungen" oder "... – noch 1 Spieler muss schlafen".
  */
 public final class MehrspielerSchlaf extends Modul implements Listener {
 
@@ -63,19 +65,44 @@ public final class MehrspielerSchlaf extends Modul implements Listener {
         Player schlaefer = event.getPlayer();
         World welt = schlaefer.getWorld();
 
-        int spielerInDerWelt = 0;
+        // Gezaehlt wird wie in Minecraft selbst (SleepStatus): Zuschauer zaehlen nicht mit,
+        // Spieler mit "sleepingIgnored" zaehlen als schlafend.
+        int aktiveSpieler = 0;
         int schlafende = 1; // der Spieler selbst liegt ab jetzt im Bett
 
         for (Player anderer : welt.getPlayers()) {
-            spielerInDerWelt++;
-            if (anderer != schlaefer && anderer.isSleeping()) {
+            if (anderer.getGameMode() == GameMode.SPECTATOR) {
+                continue;
+            }
+            aktiveSpieler++;
+            if (anderer != schlaefer && (anderer.isSleeping() || anderer.isSleepingIgnored())) {
                 schlafende++;
             }
         }
 
-        String nachricht = "§7" + schlaefer.getName() + " geht schlafen §8(" + schlafende + "/" + spielerInDerWelt + ")";
+        Integer prozent = welt.getGameRuleValue(GameRules.PLAYERS_SLEEPING_PERCENTAGE);
+        int benoetigt = benoetigteSchlaefer(aktiveSpieler, prozent == null ? 100 : prozent);
+        int fehlen = benoetigt - schlafende;
+
+        String nachricht;
+        if (benoetigt > aktiveSpieler) {
+            nachricht = "§7" + schlaefer.getName() + " geht schlafen.";
+        } else if (fehlen <= 0) {
+            nachricht = "§7" + schlaefer.getName() + " geht schlafen §8– §7die Nacht wird übersprungen.";
+        } else if (fehlen == 1) {
+            nachricht = "§7" + schlaefer.getName() + " geht schlafen §8– §7noch 1 Spieler muss schlafen.";
+        } else {
+            nachricht = "§7" + schlaefer.getName() + " geht schlafen §8– §7noch " + fehlen + " Spieler müssen schlafen.";
+        }
+
         for (Player anderer : welt.getPlayers()) {
             anderer.sendMessage(nachricht);
         }
+    }
+
+
+    /** Dieselbe Formel wie Minecraft: mindestens einer, sonst aufgerundet Prozent der aktiven Spieler. */
+    private static int benoetigteSchlaefer(int aktiveSpieler, int prozent) {
+        return Math.max(1, (int) Math.ceil(aktiveSpieler * prozent / 100.0f));
     }
 }

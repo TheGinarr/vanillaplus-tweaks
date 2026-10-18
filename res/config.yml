@@ -70,12 +70,16 @@ cpu-placeholder:
 #  ERSATZ FUER DIE FRUEHEREN DATAPACKS
 # --------------------------------------------------------------------
 
-# "AFK Display": Wer so viele Sekunden nicht von der Stelle kommt, wird im Tab grau.
+# "AFK Display": Wer so viele Sekunden nicht von der Stelle kommt, wird im Tab markiert.
+# tab-name: so steht der Spieler dann im Tab (MiniMessage-Format, <name> = Spielername).
+#           Standard: durchgestrichener Name und dahinter grau "AFK".
 afk:
   enabled: true
   seconds: 150
+  tab-name: "<st><name></st> <gray>AFK</gray>"
 
-# "Multiplayer Sleep": Chat-Meldung, wer schlafen geht.
+# "Multiplayer Sleep": Chat-Meldung, wer schlafen geht und ob die Nacht uebersprungen wird
+# (z. B. "Steve geht schlafen – die Nacht wird übersprungen" oder "... – noch 1 Spieler muss schlafen").
 # percentage: wie viel Prozent der Spieler schlafen muessen, damit die Nacht vorbei ist.
 #             -1 = nicht veraendern (der aktuelle Wert der Spielregel bleibt), 0 = ein Spieler reicht.
 sleep:

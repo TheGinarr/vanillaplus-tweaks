@@ -2,35 +2,54 @@ package vanillaplustweaks.datapacks;
 
 import vanillaplustweaks.Modul;
 import vanillaplustweaks.VanillaPlusTweaks;
-import net.kyori.adventure.text.format.NamedTextColor;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.minimessage.MiniMessage;
+import net.kyori.adventure.text.minimessage.tag.resolver.Placeholder;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.Team;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 
 /**
  * Ersetzt das Datapack "AFK Display" (Vanilla Tweaks).
  *
- * Wer eine bestimmte Zeit lang nicht von der Stelle kommt, landet im grauen Team "vpt_afk"
- * und erscheint dadurch grau in der Tab-Liste. Sobald er sich bewegt, wird er wieder normal angezeigt.
+ * Wer eine bestimmte Zeit lang nicht von der Stelle kommt, wird in der Tab-Liste markiert,
+ * standardmaessig mit durchgestrichenem Namen und dem Zusatz "AFK". Sobald er sich bewegt,
+ * steht dort wieder der normale Name.
  *
- * Unterschied zum Datapack: Es wird nur alle 5 Sekunden geprueft statt mit einer Befehlsschleife.
+ * Die Markierung ist nur der Tab-Name des Spielers. Sie wird nirgends gespeichert und ist
+ * nach einem Neustart oder Neu-Einloggen automatisch weg.
+ *
+ * Unterschied zum Datapack: Es wird nur alle 5 Sekunden geprueft statt mit einer Befehlsschleife,
+ * und es gibt kein Team mehr, in dem man "haengen bleiben" kann.
  */
-public final class AfkAnzeige extends Modul {
+public final class AfkAnzeige extends Modul implements Listener {
 
-    private static final String TEAM_NAME = "vpt_afk";
+    /**
+     * Teams aus frueheren Versionen: "afkDis.afk" vom Datapack, "tb_afk" und "vpt_afk" von aelteren
+     * Plugin-Versionen. Wer beim Umstieg darin stand, bliebe sonst fuer immer grau.
+     */
+    private static final List<String> ALTE_TEAMS = List.of("afkDis.afk", "tb_afk", "vpt_afk");
 
     /** Unter diesem Abstand (in Bloecken) gilt man als "nicht bewegt". */
     private static final double KLEINSTE_BEWEGUNG = 0.01;
 
     private long afkNachMillis;
+    private String anzeige;
 
     private final Map<UUID, Location> letztePosition = new HashMap<>();
     private final Map<UUID, Long> letzteBewegung = new HashMap<>();
+    private final Set<UUID> afk = new HashSet<>();
 
 
     public AfkAnzeige(VanillaPlusTweaks plugin) {
@@ -47,13 +66,16 @@ public final class AfkAnzeige extends Modul {
     @Override
     public void start() {
         afkNachMillis = zahl("seconds", 150) * 1000L;
+        anzeige = text("tab-name", "<st><name></st> <gray>AFK</gray>");
+
+        alteTeamsEntfernen();
+        registriereListener(this);
         wiederholeAlle(100, this::pruefen);
     }
 
 
     private void pruefen() {
         long jetzt = System.currentTimeMillis();
-        Team afkTeam = afkTeam();
 
         for (Player spieler : plugin.getServer().getOnlinePlayers()) {
             UUID id = spieler.getUniqueId();
@@ -62,15 +84,31 @@ public final class AfkAnzeige extends Modul {
 
             if (hatSichBewegt(vorher, hier)) {
                 letzteBewegung.put(id, jetzt);
-                afkTeam.removeEntry(spieler.getName());
+                if (afk.remove(id)) {
+                    spieler.playerListName(null); // zurueck zum normalen Namen
+                }
                 continue;
             }
 
             long stillSeit = jetzt - letzteBewegung.getOrDefault(id, jetzt);
-            if (stillSeit >= afkNachMillis && !afkTeam.hasEntry(spieler.getName())) {
-                afkTeam.addEntry(spieler.getName());
+            if (stillSeit >= afkNachMillis && afk.add(id)) {
+                spieler.playerListName(afkName(spieler));
             }
         }
+    }
+
+
+    @EventHandler
+    public void beimVerlassen(PlayerQuitEvent event) {
+        UUID id = event.getPlayer().getUniqueId();
+        letztePosition.remove(id);
+        letzteBewegung.remove(id);
+        afk.remove(id);
+    }
+
+
+    private Component afkName(Player spieler) {
+        return MiniMessage.miniMessage().deserialize(anzeige, Placeholder.unparsed("name", spieler.getName()));
     }
 
 
@@ -85,15 +123,15 @@ public final class AfkAnzeige extends Modul {
     }
 
 
-    /** Holt das AFK-Team vom Haupt-Scoreboard oder legt es beim ersten Mal an. */
-    private Team afkTeam() {
+    private void alteTeamsEntfernen() {
         Scoreboard scoreboard = plugin.getServer().getScoreboardManager().getMainScoreboard();
-        Team team = scoreboard.getTeam(TEAM_NAME);
 
-        if (team == null) {
-            team = scoreboard.registerNewTeam(TEAM_NAME);
-            team.color(NamedTextColor.GRAY);
+        for (String name : ALTE_TEAMS) {
+            Team team = scoreboard.getTeam(name);
+            if (team != null) {
+                log("Altes AFK-Team '" + name + "' entfernt (" + team.getEntries().size() + " Eintraege).");
+                team.unregister();
+            }
         }
-        return team;
     }
 }
